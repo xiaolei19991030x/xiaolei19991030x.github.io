@@ -547,20 +547,23 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2019/08/06/我的第一篇博客/",
-  owner: 'xiaolei19991030x',
-  repo: 'xiaolei19991030x.github.io',
-  oauth: {
-    client_id: '0285a29b45b473a5c39d',
-    client_secret: '973f6fcf72d491bf162cd574750df44ecdf84a07',
-  },
-})
-gitment.render('gitment-ctn')
+  {% if site.comment_gitment_repo %}
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Tue Aug 06 2019 16:41:25 GMT+0800',
+        owner: '{{site.github_username}}',
+        repo: '{{site.comment_gitment_repo}}',
+        oauth: {
+            client_id: '{{site.comment_gitment_clientId}}',
+            client_secret: '{{site.comment_gitment_clientSecret}}',
+        },
+    });
+    gitment.render('gitmentContainer')
 </script>
+{% endif %}
   
 
 

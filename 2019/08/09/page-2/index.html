@@ -21,7 +21,8 @@
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/3.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/5.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/4.png">
-<meta property="og:updated_time" content="2019-08-10T15:33:34.000Z">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/6.png">
+<meta property="og:updated_time" content="2019-08-10T15:46:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo+yilia搭建自己的博客网站（二）进阶笔记">
 <meta name="twitter:description" content="前言：继上次把博客搭建好之后，我便开始学习MacDown语法开始写博客，可以参考github官网上的教程：MacDown语法，MacDown语法其实很简单的，学起来也很快，后续我会单独来用一篇文章来讲其语法。今天我主要是给大家介绍一下这是我在Yilia这个主题下的参考很多前人的经验并且在个人博客上验证的功能的记录。">
@@ -226,8 +227,8 @@
 <a id="more"></a>
 
 
-<h2 id="一、头像／图标设置"><a href="#一、头像／图标设置" class="headerlink" title="一、头像／图标设置"></a>一、头像／图标设置</h2><p>###1.存放位置<br>头像、图标图片的存放位置是 <em>/themes/yilia/source/</em> 下任意位置，可以自己新建一个文件夹存放，我新建了一个 img 文件夹， 把照片放在<em>/themes/yilia/source/img/</em>   文件夹下。<br><img src="/2019/08/09/page-2/1.png" alt="1"></p>
-<p>###2.配置位置<br>配置文件为 <em>/themes/yilia/_config.yml</em><br><img src="/2019/08/09/page-2/2.png" alt="2"></p>
+<h2 id="一、头像／图标设置"><a href="#一、头像／图标设置" class="headerlink" title="一、头像／图标设置"></a>一、头像／图标设置</h2><h3 id="1-存放位置"><a href="#1-存放位置" class="headerlink" title="1.存放位置"></a>1.存放位置</h3><p>头像、图标图片的存放位置是 <em>/themes/yilia/source/</em> 下任意位置，可以自己新建一个文件夹存放，我新建了一个 img 文件夹， 把照片放在<em>/themes/yilia/source/img/</em>   文件夹下。<br><img src="/2019/08/09/page-2/1.png" alt="1"></p>
+<h3 id="2-配置位置"><a href="#2-配置位置" class="headerlink" title="2.配置位置"></a>2.配置位置</h3><p>配置文件为 <em>/themes/yilia/_config.yml</em><br><img src="/2019/08/09/page-2/2.png" alt="2"></p>
 <ul>
 <li>设置头像为配置文件中 <strong>avatar</strong> 一项</li>
 <li>设置图标为配置文件中 <strong>favicon</strong> 一项</li>
@@ -251,6 +252,7 @@
 <p>可以添加样式，改变大小，这是我的代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav <span class="class"><span class="keyword">class</span></span>=<span class="string">"header-nav"</span>&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"social"</span>&gt;</span><br><span class="line">		&lt;% <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> theme.subnav)&#123; %&gt;</span><br><span class="line">			&lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">"&lt;%= i %&gt;"</span> target=<span class="string">"_blank"</span> href=<span class="string">"&lt;%- url_for(theme.subnav[i]) %&gt;"</span> title=<span class="string">"&lt;%= i %&gt;"</span>&gt;&lt;i class="icon-&lt;%= i %&gt;"&gt;&lt;/i&gt;&lt;/a&gt;</span><br><span class="line">		&lt;%&#125;%&gt;</span><br><span class="line">	&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">		</span></span><br><span class="line"><span class="regexp">	&lt;!-- 网易云音乐插件 --&gt;</span></span><br><span class="line"><span class="regexp">	&lt;div style="margin-top:30px;"&gt;</span></span><br><span class="line"><span class="regexp">		&lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=52 src="/</span><span class="regexp">/music.163.com/</span>outchain/player?type=<span class="number">2</span>&amp;id=<span class="number">554242032</span>&amp;auto=<span class="number">1</span>&amp;height=<span class="number">32</span><span class="string">"&gt;&lt;/iframe&gt;</span></span><br><span class="line"><span class="string">	&lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/nav&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>以我的博客为例，最后的效果为：<br><img src="/2019/08/09/page-2/6.png" alt="6"></p>
 
       
 	
@@ -431,7 +433,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、头像／图标设置"><span class="toc-number"></span> <span class="toc-text">一、头像／图标设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、yilia下的-config-yml完善"><span class="toc-number"></span> <span class="toc-text">二、yilia下的_config.yml完善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、侧边栏添加音乐"><span class="toc-number"></span> <span class="toc-text">三、侧边栏添加音乐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-网易云音乐外链播放器生成"><span class="toc-number">1.</span> <span class="toc-text">1.网易云音乐外链播放器生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-侧栏添加背景音乐"><span class="toc-number">2.</span> <span class="toc-text">2.侧栏添加背景音乐</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、头像／图标设置"><span class="toc-number"></span> <span class="toc-text">一、头像／图标设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-存放位置"><span class="toc-number">1.</span> <span class="toc-text">1.存放位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置位置"><span class="toc-number">2.</span> <span class="toc-text">2.配置位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、yilia下的-config-yml完善"><span class="toc-number"></span> <span class="toc-text">二、yilia下的_config.yml完善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、侧边栏添加音乐"><span class="toc-number"></span> <span class="toc-text">三、侧边栏添加音乐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-网易云音乐外链播放器生成"><span class="toc-number">1.</span> <span class="toc-text">1.网易云音乐外链播放器生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-侧栏添加背景音乐"><span class="toc-number">2.</span> <span class="toc-text">2.侧栏添加背景音乐</span></a></li></ol>
                     </div>
                 </span>
             </div>

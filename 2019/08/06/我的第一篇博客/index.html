@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://bbsmax.ikafan.com/static/L3Byb3h5L2h0dHAvaW1hZ2VzMjAxNy5jbmJsb2dzLmNvbS9ibG9nLzkwMDc0MC8yMDE3MDgvOTAwNzQwLTIwMTcwODIxMDAxMzQwNjMxLTE5MDA1MTExNTQucG5n.jpg">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/06/我的第一篇博客/13.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/06/我的第一篇博客/14.png">
-<meta property="og:updated_time" content="2019-08-10T02:40:11.000Z">
+<meta property="og:updated_time" content="2019-08-10T15:03:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo＋yilia搭建自己的博客网站（一）基础入门">
 <meta name="twitter:description" content="前言：最近在学习数据结构的排序算法的时候想尝试写博客，于是在网上翻阅了许多写博客网站，比如CSDN、简书、github等等，相比较之后发现还是在github上搭建自己的博客挺有趣的，翻阅了无数的资料，这其中遇到了很多困难，但最终还是成功了，所以接下来给大家分享一下如何在mac笔记本上搭建自己的博客。">
@@ -338,7 +338,7 @@
 <p>配置blog/_config.yml中有关deploy的部分</p>
 <p><img src="/2019/08/06/我的第一篇博客/12.png" alt="12"></p>
 <p>正确写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  		type: git </span><br><span class="line">  		repository：git@github.com:username/username.github.io.git  </span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">		type: git </span><br><span class="line">		repository：git@github.com:username/username.github.io.git  </span><br><span class="line">		branch: master</span><br></pre></td></tr></table></figure>
 
 <p>注意：repository这种形式的是配置了SSH Key之后的，如果没有配置则使用Https形式的地址,冒号后面一定要空一格不然会报错的！！！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repository: https://github.com/username/username.github.io.git</span><br></pre></td></tr></table></figure>

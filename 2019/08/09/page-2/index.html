@@ -31,7 +31,16 @@
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/13.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/14.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/15.png">
-<meta property="og:updated_time" content="2019-08-12T07:47:26.000Z">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/16.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/17.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/2.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/18.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/19.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/20.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/21.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/22.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/23.png">
+<meta property="og:updated_time" content="2019-08-12T07:52:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo+yilia搭建自己的博客网站（二）进阶笔记">
 <meta name="twitter:description" content="前言：继上次把博客搭建好之后，我便开始学习MacDown语法开始写博客，可以参考github官网上的教程：MacDown语法，MacDown语法其实很简单的，学起来也很快，后续我会单独来用一篇文章来讲其语法。今天我主要是给大家介绍一下这是我在Yilia这个主题下的参考很多前人的经验并且在个人博客上验证的功能的记录。">
@@ -207,7 +216,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">3.3k字</span>
+        <span class="post-count">3.2k字</span>
       </span>
     </span>
 
@@ -298,54 +307,59 @@
 <p>位置如下：</p>
 <p><img src="/2019/08/09/page-2/15.png" alt="15"></p>
 <h3 id="2-版权添加样式"><a href="#2-版权添加样式" class="headerlink" title="2.版权添加样式"></a>2.版权添加样式</h3><p>在 <em>yilia/___source/main.0cf68a.css</em> 添加如下代码:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.declare</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#eaeaea</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">3px</span> solid <span class="number">#ff1700</span>;</span><br><span class="line">  <span class="attribute">padding</span>: .<span class="number">5em</span> <span class="number">1em</span>; &#125;</span><br><span class="line">  </span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.添加配置文件</span><br><span class="line">修改 _themes/yilia/___config.yml_ ：</span><br></pre></td></tr></table></figure>
-
-<p>declare_type: 1<br>licensee_url: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">https://creativecommons.org/licenses/by-nc-sa/4.0/</a>          # 当前应用的版权协议地址。<br>licensee_name: ‘知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议’  # 版权协议的名称<br>licensee_img: <a href="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" target="_blank" rel="noopener">https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png</a>      # 版权协议的Logo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">随后在需要进行版权声明的文章的.md文件的头部，设置属性 declare:true。</span><br><span class="line"></span><br><span class="line">版权基础设定：</span><br><span class="line"></span><br><span class="line">* 0 - 关闭声明；</span><br><span class="line">* 1 - 文章对应的 md 文件里有 declare: true 属性，才有版权声明；</span><br><span class="line">* 2 - 所有文章均有版权声明</span><br><span class="line"></span><br><span class="line">### 4.修改博客的url</span><br><span class="line">修改 _themes/yilia/___config.yml_,改成自己的博客的地址。</span><br></pre></td></tr></table></figure>
-
-<p>url: <a href="https://yourusername.github.io/" target="_blank" rel="noopener">https://yourusername.github.io/</a><br>root: /<br>permalink: :year/:month/:day/:title/<br>permalink_defaults:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">效果如下：</span><br><span class="line"></span><br><span class="line">![16](page-2/16.png)</span><br><span class="line"></span><br><span class="line">## 七、点击所有文章提示缺失模块</span><br><span class="line">### 1.问题</span><br><span class="line">左侧栏目有一个全部文章的按钮，刚开始开始报错缺失模块，如下图：</span><br><span class="line"></span><br><span class="line">![17](page-2/17.png)</span><br><span class="line"></span><br><span class="line">### 2.解决办法</span><br><span class="line"></span><br><span class="line">* 查看node版本</span><br><span class="line">之前上一篇的时候就已经介绍过用终端查看node版本，这里再说一遍。打开终端，输入代码</span><br></pre></td></tr></table></figure>
-
-<p>node -v</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">![2](我的第一篇博客/2.png)</span><br><span class="line">  </span><br><span class="line">只要node版本高于6.2就行</span><br><span class="line"> </span><br><span class="line">* 在博客根目录（注意不是 yilia 根目录）执行以下命令：</span><br></pre></td></tr></table></figure>
-
-<p>npm install hexo-generator-json-content –save</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">运行后可能会报错，但并没有什么关系，注意红色框框内的信息：</span><br><span class="line"></span><br><span class="line">![18](page-2/18.png)</span><br><span class="line"></span><br><span class="line">但是你需要在theme文件夹的yilia主题文件夹下，找到node——modules文件夹。如果hexo-generator-json-content这个包是存在的就OK，可以进行第三步了，见下图：</span><br><span class="line"></span><br><span class="line">![19](page-2/19.png)</span><br><span class="line"></span><br><span class="line">* 配置文件</span><br><span class="line"></span><br><span class="line">在 hexo 的 blog 根目录_config.yml 里添加配置（保持格式，不要改动任何空格缩进）</span><br></pre></td></tr></table></figure>
-
-<p>jsonContent:<br>  meta: false<br>  pages: false<br>  posts:<br>    title: true<br>    date: true<br>    path: true<br>    text: false<br>    raw: false<br>    content: false<br>    slug: false<br>    updated: false<br>    comments: false<br>    link: false<br>    permalink: false<br>    excerpt: false<br>    categories: false<br>    tags: true</p>
-<pre><code>
-最终效果：
-
-![20](page-2/20.png)
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.declare &#123;</span><br><span class="line">background-color: #eaeaea;</span><br><span class="line">margin-top: <span class="number">2</span>em;</span><br><span class="line">border-left: 3px solid #ff1700;</span><br><span class="line">padding: <span class="number">.5</span>em <span class="number">1</span>em; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-## 八、打赏功能的优化
-博客主题下每篇文底部都会有一个打赏功能的，但是需要自己去完善里面的支付宝和微信的二维码的图片，过程也比较简单。
+<h3 id="3-添加配置文件"><a href="#3-添加配置文件" class="headerlink" title="3.添加配置文件"></a>3.添加配置文件</h3><p>修改 <em>themes/yilia/___config.yml</em> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">declare_type: 1</span><br><span class="line">licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/          # 当前应用的版权协议地址。</span><br><span class="line">licensee_name: &apos;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&apos;  # 版权协议的名称</span><br><span class="line">licensee_img: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png      # 版权协议的Logo</span><br></pre></td></tr></table></figure>
 
-打开配置文件_/themes/yilia/___config.yml_,找到打赏的模块，和设置头像的方式一样，修改```alipay```和```weixin```图片等地址，将图片存放在某个路径下面。
+<p>随后在需要进行版权声明的文章的.md文件的头部，设置属性 declare:true。</p>
+<p>版权基础设定：</p>
+<ul>
+<li>0 - 关闭声明；</li>
+<li>1 - 文章对应的 md 文件里有 declare: true 属性，才有版权声明；</li>
+<li>2 - 所有文章均有版权声明</li>
+</ul>
+<h3 id="4-修改博客的url"><a href="#4-修改博客的url" class="headerlink" title="4.修改博客的url"></a>4.修改博客的url</h3><p>修改 <em>themes/yilia/___config.yml</em>,改成自己的博客的地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url: https://yourusername.github.io/</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
 
-![21](page-2/21.png)
-
-我将图片放在 _blog/source/assets/img_ 下：
-
-![22](page-2/22.png)
-
-最终效果：
-
-![23](page-2/23.png)
-
-
-
-
-
-
-
-
-
+<p>效果如下：</p>
+<p><img src="/2019/08/09/page-2/16.png" alt="16"></p>
+<h2 id="七、点击所有文章提示缺失模块"><a href="#七、点击所有文章提示缺失模块" class="headerlink" title="七、点击所有文章提示缺失模块"></a>七、点击所有文章提示缺失模块</h2><h3 id="1-问题"><a href="#1-问题" class="headerlink" title="1.问题"></a>1.问题</h3><p>左侧栏目有一个全部文章的按钮，刚开始开始报错缺失模块，如下图：</p>
+<p><img src="/2019/08/09/page-2/17.png" alt="17"></p>
+<h3 id="2-解决办法"><a href="#2-解决办法" class="headerlink" title="2.解决办法"></a>2.解决办法</h3><ul>
+<li>查看node版本<br>之前上一篇的时候就已经介绍过用终端查看node版本，这里再说一遍。打开终端，输入代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 
 
+<p><img src="/2019/08/09/page-2/2.png" alt="2"></p>
+<p>只要node版本高于6.2就行</p>
+<ul>
+<li>在博客根目录（注意不是 yilia 根目录）执行以下命令：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
 
-</code></pre>
+<p>运行后可能会报错，但并没有什么关系，注意红色框框内的信息：</p>
+<p><img src="/2019/08/09/page-2/18.png" alt="18"></p>
+<p>但是你需要在theme文件夹的yilia主题文件夹下，找到node——modules文件夹。如果hexo-generator-json-content这个包是存在的就OK，可以进行第三步了，见下图：</p>
+<p><img src="/2019/08/09/page-2/19.png" alt="19"></p>
+<ul>
+<li>配置文件</li>
+</ul>
+<p>在 hexo 的 blog 根目录_config.yml 里添加配置（保持格式，不要改动任何空格缩进）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
+
+<p>最终效果：</p>
+<p><img src="/2019/08/09/page-2/20.png" alt="20"></p>
+<h2 id="八、打赏功能的优化"><a href="#八、打赏功能的优化" class="headerlink" title="八、打赏功能的优化"></a>八、打赏功能的优化</h2><p>博客主题下每篇文底部都会有一个打赏功能的，但是需要自己去完善里面的支付宝和微信的二维码的图片，过程也比较简单。</p>
+<p>打开配置文件<em>/themes/yilia/___config.yml</em>,找到打赏的模块，和设置头像的方式一样，修改<code>alipay</code>和<code>weixin</code>图片等地址，将图片存放在某个路径下面。</p>
+<p><img src="/2019/08/09/page-2/21.png" alt="21"></p>
+<p>我将图片放在 <em>blog/source/assets/img</em> 下：</p>
+<p><img src="/2019/08/09/page-2/22.png" alt="22"></p>
+<p>最终效果：</p>
+<p><img src="/2019/08/09/page-2/23.png" alt="23"></p>
+
       
 	
 
@@ -525,7 +539,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、头像／图标设置"><span class="toc-number"></span> <span class="toc-text">一、头像／图标设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-存放位置"><span class="toc-number">1.</span> <span class="toc-text">1.存放位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置位置"><span class="toc-number">2.</span> <span class="toc-text">2.配置位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、yilia下的-config-yml完善"><span class="toc-number"></span> <span class="toc-text">二、yilia下的_config.yml完善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、侧边栏添加音乐"><span class="toc-number"></span> <span class="toc-text">三、侧边栏添加音乐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-网易云音乐外链播放器生成"><span class="toc-number">1.</span> <span class="toc-text">1.网易云音乐外链播放器生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-侧栏添加背景音乐"><span class="toc-number">2.</span> <span class="toc-text">2.侧栏添加背景音乐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、添加页面访问量"><span class="toc-number"></span> <span class="toc-text">四、添加页面访问量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-添加站点访问量"><span class="toc-number">1.</span> <span class="toc-text">1.添加站点访问量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-添加文章访问量"><span class="toc-number">2.</span> <span class="toc-text">2.添加文章访问量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、网站运行时间"><span class="toc-number"></span> <span class="toc-text">五、网站运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、字数、阅读时长添加"><span class="toc-number"></span> <span class="toc-text">五、字数、阅读时长添加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装-hexo-wordcount"><span class="toc-number">1.</span> <span class="toc-text">1.安装 hexo-wordcount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文件配置"><span class="toc-number">2.</span> <span class="toc-text">2.文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-开启功能"><span class="toc-number">3.</span> <span class="toc-text">3.开启功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、添加版权信息"><span class="toc-number"></span> <span class="toc-text">六、添加版权信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-添加代码"><span class="toc-number">1.</span> <span class="toc-text">1.添加代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-版权添加样式"><span class="toc-number">2.</span> <span class="toc-text">2.版权添加样式</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、头像／图标设置"><span class="toc-number"></span> <span class="toc-text">一、头像／图标设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-存放位置"><span class="toc-number">1.</span> <span class="toc-text">1.存放位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置位置"><span class="toc-number">2.</span> <span class="toc-text">2.配置位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、yilia下的-config-yml完善"><span class="toc-number"></span> <span class="toc-text">二、yilia下的_config.yml完善</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、侧边栏添加音乐"><span class="toc-number"></span> <span class="toc-text">三、侧边栏添加音乐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-网易云音乐外链播放器生成"><span class="toc-number">1.</span> <span class="toc-text">1.网易云音乐外链播放器生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-侧栏添加背景音乐"><span class="toc-number">2.</span> <span class="toc-text">2.侧栏添加背景音乐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、添加页面访问量"><span class="toc-number"></span> <span class="toc-text">四、添加页面访问量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-添加站点访问量"><span class="toc-number">1.</span> <span class="toc-text">1.添加站点访问量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-添加文章访问量"><span class="toc-number">2.</span> <span class="toc-text">2.添加文章访问量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、网站运行时间"><span class="toc-number"></span> <span class="toc-text">五、网站运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、字数、阅读时长添加"><span class="toc-number"></span> <span class="toc-text">五、字数、阅读时长添加</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装-hexo-wordcount"><span class="toc-number">1.</span> <span class="toc-text">1.安装 hexo-wordcount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文件配置"><span class="toc-number">2.</span> <span class="toc-text">2.文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-开启功能"><span class="toc-number">3.</span> <span class="toc-text">3.开启功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、添加版权信息"><span class="toc-number"></span> <span class="toc-text">六、添加版权信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-添加代码"><span class="toc-number">1.</span> <span class="toc-text">1.添加代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-版权添加样式"><span class="toc-number">2.</span> <span class="toc-text">2.版权添加样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-添加配置文件"><span class="toc-number">3.</span> <span class="toc-text">3.添加配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-修改博客的url"><span class="toc-number">4.</span> <span class="toc-text">4.修改博客的url</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、点击所有文章提示缺失模块"><span class="toc-number"></span> <span class="toc-text">七、点击所有文章提示缺失模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-问题"><span class="toc-number">1.</span> <span class="toc-text">1.问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-解决办法"><span class="toc-number">2.</span> <span class="toc-text">2.解决办法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、打赏功能的优化"><span class="toc-number"></span> <span class="toc-text">八、打赏功能的优化</span></a>
                     </div>
                 </span>
             </div>

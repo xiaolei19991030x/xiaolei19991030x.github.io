@@ -1,23 +1,90 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>&lt;% if (title){ %&gt;&lt;%= title %&gt; | &lt;% } %&gt;&lt;%= config.title %&gt;</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1404.47">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; background-color: #ffffff; -webkit-text-stroke: 0px #84613d}
-    span.s3 {font-kerning: none; background-color: #ffffff}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;% var title = page.title; if (is_archive()){ title = 'Archives'; if (is_month()){ title += ': ' + page.year + '/' + page.month; } else if (is_year()){ title += ': ' + page.year; } } else if (is_category()){ title = 'Category: ' + page.category; } else if (is_tag()){ title = 'Tag: ' + page.tag; } %&gt; &lt;%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %&gt; &lt;% if (theme.rss){ %&gt; &lt;% } %&gt; &lt;% if (theme.favicon){ %&gt; &lt;% } %&gt; &lt;%- partial('css') %&gt; </span><span class="s2">&lt;% if (theme.avatarrotation){ %&gt; &lt;link rel="stylesheet" type="text/css" href="/./avatarrotation.css"&gt; &lt;% } %&gt; </span><span class="s3">&lt;%- partial('google-analytics') %&gt; &lt;%- partial('baidu-analytics') %&gt;<span class="Apple-converted-space"> </span></span></p>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
-</html>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="https://xiaolei19991030x.github.io">
+  <title>github+hexo+yilia搭建自己的博客网站（二）进阶笔记 | O磊的blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言：继上次把博客搭建好之后，我便开始学习MacDown语法开始写博客，可以参考github官网上的教程：MacDown语法，MacDown语法其实很简单的，学起来也很快，后续我会单独来用一篇文章来讲其语法。今天我主要是给大家介绍一下这是我在Yilia这个主题下的参考很多前人的经验并且在个人博客上验证的功能的记录。">
+<meta name="keywords" content="yilia,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github+hexo+yilia搭建自己的博客网站（二）进阶笔记">
+<meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/index.html">
+<meta property="og:site_name" content="O磊的blog">
+<meta property="og:description" content="前言：继上次把博客搭建好之后，我便开始学习MacDown语法开始写博客，可以参考github官网上的教程：MacDown语法，MacDown语法其实很简单的，学起来也很快，后续我会单独来用一篇文章来讲其语法。今天我主要是给大家介绍一下这是我在Yilia这个主题下的参考很多前人的经验并且在个人博客上验证的功能的记录。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/1.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/2.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/3.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/5.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/4.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/6.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/7.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/8.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/9.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/10.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/11.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/12.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/13.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/14.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/15.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/16.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/17.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/2.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/18.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/19.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/20.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/21.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/22.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/23.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/24.gif">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/25.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/26.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/27.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/28.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/29.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/30.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/32.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/33.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/34.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/35.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/36.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/37.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/40.png">
+<meta property="og:updated_time" content="2019-08-13T05:56:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="github+hexo+yilia搭建自己的博客网站（二）进阶笔记">
+<meta name="twitter:description" content="前言：继上次把博客搭建好之后，我便开始学习MacDown语法开始写博客，可以参考github官网上的教程：MacDown语法，MacDown语法其实很简单的，学起来也很快，后续我会单独来用一篇文章来讲其语法。今天我主要是给大家介绍一下这是我在Yilia这个主题下的参考很多前人的经验并且在个人博客上验证的功能的记录。">
+<meta name="twitter:image" content="https://xiaolei19991030x.github.io/2019/08/09/page-2/1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="O磊的blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/head1.jpg">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
 
+<!--增加旋转头像的css-->
+
+	<link rel="stylesheet" type="text/css" href="/./avatarrotation.css">
+
+<!--增加旋转头像的css-->
+
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>

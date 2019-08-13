@@ -234,6 +234,36 @@
 	
       </header>
     
+	
+
+	
+    <!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过程："><span class="toc-number">2.</span> <span class="toc-text">过程：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、配置环境"><span class="toc-number">3.</span> <span class="toc-text">一、配置环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、安装Hexo"><span class="toc-number">4.</span> <span class="toc-text">二、安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、如何将hexo与github-page联系起来"><span class="toc-number">5.</span> <span class="toc-text">三、如何将hexo与github page联系起来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、保留CNAME、README-md等文件"><span class="toc-number">6.</span> <span class="toc-text">四、保留CNAME、README.md等文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、修改hexo的主题"><span class="toc-number">7.</span> <span class="toc-text">五、修改hexo的主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、写博客"><span class="toc-number">8.</span> <span class="toc-text">六、写博客</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+      
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>最近在学习数据结构的排序算法的时候想尝试写博客，于是在网上翻阅了许多写博客网站，比如CSDN、简书、github等等，相比较之后发现还是在github上搭建自己的博客挺有趣的，翻阅了无数的资料，这其中遇到了很多困难，但最终还是成功了，所以接下来给大家分享一下如何在mac笔记本上搭建自己的博客。</p>

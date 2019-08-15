@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://xiaolei19991030x.github.io">
   <title>排序算法—归并排序 | O磊的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。 二、算法思想该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。 分而治之： 1、分阶段可以看到这种结构很像">
+  <meta name="description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。">
 <meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法—归并排序">
 <meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/15/page-4/index.html">
 <meta property="og:site_name" content="O磊的blog">
-<meta property="og:description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。 二、算法思想该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。 分而治之： 1、分阶段可以看到这种结构很像">
+<meta property="og:description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cuijiahua.com/wp-content/uploads/2018/01/algorithm_7_1.png">
 <meta property="og:image" content="https://cuijiahua.com/wp-content/uploads/2018/01/algorithm_7_2.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/15/page-4/1.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7789414-b410a7c0fea50eba.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7789414-4b8f4cb3cb5f0a9f.png">
-<meta property="og:updated_time" content="2019-08-15T07:17:35.000Z">
+<meta property="og:updated_time" content="2019-08-15T07:20:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法—归并排序">
-<meta name="twitter:description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。 二、算法思想该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。 分而治之： 1、分阶段可以看到这种结构很像">
+<meta name="twitter:description" content="一、前言归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。">
 <meta name="twitter:image" content="https://cuijiahua.com/wp-content/uploads/2018/01/algorithm_7_1.png">
   
     <link rel="alternative" href="/atom.xml" title="O磊的blog" type="application/atom+xml">
@@ -255,6 +255,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用<strong>分治法（Divide and Conquer）</strong>的一个非常典型的应用。</p>
+<a id="more"></a>
+
 <h3 id="二、算法思想"><a href="#二、算法思想" class="headerlink" title="二、算法思想"></a>二、算法思想</h3><p>该算法采用经典的<strong>分治</strong>（divide-and-conquer）策略（分治法将问题<strong>分</strong>(divide)成一些小的问题然后递归求解，而<strong>治</strong>(conquer)的阶段则将分的阶段得到的各答案”修补”在一起，即分而治之)。</p>
 <p>分而治之：</p>
 <p>1、分阶段<br><img src="https://cuijiahua.com/wp-content/uploads/2018/01/algorithm_7_1.png" alt><br>可以看到这种结构很像一棵完全二叉树，本文的归并排序我们采用递归去实现（也可采用迭代的方式去实现）。分阶段可以理解为就是递归拆分子序列的过程，递归深度为logn。</p>

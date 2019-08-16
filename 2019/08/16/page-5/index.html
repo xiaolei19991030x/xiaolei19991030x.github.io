@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://xiaolei19991030x.github.io">
   <title>排序算法－快速排序 | O磊的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。 1.算法思想(1)  我们从待排序的记录序列中选取一个记录(通常第一个)作为基准元素(称为temp) temp = arr[low]，然后设置两个变量，low指向数列的最左部，high指向数据的最右部。 (2)  temp首先与 arr[high] 进行比较，如果 arr[high] &amp;lt; te">
+  <meta name="description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。">
 <meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法－快速排序">
 <meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/index.html">
 <meta property="og:site_name" content="O磊的blog">
-<meta property="og:description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。 1.算法思想(1)  我们从待排序的记录序列中选取一个记录(通常第一个)作为基准元素(称为temp) temp = arr[low]，然后设置两个变量，low指向数列的最左部，high指向数据的最右部。 (2)  temp首先与 arr[high] 进行比较，如果 arr[high] &amp;lt; te">
+<meta property="og:description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/1.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/2.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/4.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/5.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/6.png">
-<meta property="og:updated_time" content="2019-08-16T08:21:17.000Z">
+<meta property="og:updated_time" content="2019-08-16T08:26:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法－快速排序">
-<meta name="twitter:description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。 1.算法思想(1)  我们从待排序的记录序列中选取一个记录(通常第一个)作为基准元素(称为temp) temp = arr[low]，然后设置两个变量，low指向数列的最左部，high指向数据的最右部。 (2)  temp首先与 arr[high] 进行比较，如果 arr[high] &amp;lt; te">
+<meta name="twitter:description" content="快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。">
 <meta name="twitter:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5/1.png">
   
     <link rel="alternative" href="/atom.xml" title="O磊的blog" type="application/atom+xml">
@@ -255,6 +255,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。</p>
+<a id="more"></a>
+
 <h2 id="1-算法思想"><a href="#1-算法思想" class="headerlink" title="1.算法思想"></a>1.算法思想</h2><p>(1)  我们从待排序的记录序列中选取一个记录(通常第一个)作为基准元素(称为temp) temp = arr[low]，然后设置两个变量，low指向数列的最左部，high指向数据的最右部。<br><img src="/2019/08/16/page-5/1.png" alt="1"></p>
 <p>(2)  temp首先与 arr[high] 进行比较，如果 arr[high] &lt; temp，则arr[low] = arr[high] 将 high 的值赋值给low;如果arr[high] &gt; temp则我们只需要将 high–(high向左移动)。high– 之后，再拿arr[hirh]与temp进行比较，直到arr[high] &lt; temp交换元素为止。<br><img src="/2019/08/16/page-5/2.png" alt="1"></p>
 <p>(3)  如果右边存在arr[high] &lt; temp的情况，将arr[low] = arr[high]，接下来，将转向low端，拿arr[low]与temp进行比较，如果arr[low] &gt; temp,则将arr[high] = arr[low]，如果arr[low] &lt; temp，则只需要将 low++,然后再进行arr[low] 与 temp的比较。<br><img src="/2019/08/16/page-5/3.png" alt="3"></p>

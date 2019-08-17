@@ -12,17 +12,17 @@
 <meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" 排序算法——希尔排序">
-<meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/16/page-5-1/index.html">
+<meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/16/page-6/index.html">
 <meta property="og:site_name" content="O磊的blog">
 <meta property="og:description" content="1.基本思想希尔排序的基本思想就是：将需要排序的序列划分为若干个较小的序列，对这些序列进行直接插入排序，通过这样的操作可使需要排序的数列基本有序，最后再使用一次直接插入排序。 在希尔排序中首先要解决的是怎样划分序列，对于子序列的构成不是简单地分段，而是采取将相隔某个增量的数据组成一个序列。一般选择增量的规则是：取上一个增量的一半作为此次子序列划分的增量，一般初始值元素的总数量。  算法步骤  代码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5-1/1.png">
-<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5-1/2.png">
-<meta property="og:updated_time" content="2019-08-17T02:02:15.000Z">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-6/1.png">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-6/2.png">
+<meta property="og:updated_time" content="2019-08-17T02:07:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" 排序算法——希尔排序">
 <meta name="twitter:description" content="1.基本思想希尔排序的基本思想就是：将需要排序的序列划分为若干个较小的序列，对这些序列进行直接插入排序，通过这样的操作可使需要排序的数列基本有序，最后再使用一次直接插入排序。 在希尔排序中首先要解决的是怎样划分序列，对于子序列的构成不是简单地分段，而是采取将相隔某个增量的数据组成一个序列。一般选择增量的规则是：取上一个增量的一半作为此次子序列划分的增量，一般初始值元素的总数量。  算法步骤  代码">
-<meta name="twitter:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-5-1/1.png">
+<meta name="twitter:image" content="https://xiaolei19991030x.github.io/2019/08/16/page-6/1.png">
   
     <link rel="alternative" href="/atom.xml" title="O磊的blog" type="application/atom+xml">
   
@@ -174,7 +174,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-page-5-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-page-6" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -186,7 +186,7 @@
   
 
         
-        <a href="/2019/08/16/page-5-1/" class="archive-article-date">
+        <a href="/2019/08/16/page-6/" class="archive-article-date">
   	<time datetime="2019-08-16T09:25:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
 </a>
 	
@@ -253,14 +253,14 @@
         <h3 id="1-基本思想"><a href="#1-基本思想" class="headerlink" title="1.基本思想"></a>1.基本思想</h3><p>希尔排序的基本思想就是：将需要排序的序列划分为若干个较小的序列，对这些序列进行直接插入排序，通过这样的操作可使需要排序的数列基本有序，最后再使用一次直接插入排序。</p>
 <p>在希尔排序中首先要解决的是怎样划分序列，对于子序列的构成不是简单地分段，而是采取将相隔某个增量的数据组成一个序列。一般选择增量的规则是：取上一个增量的一半作为此次子序列划分的增量，一般初始值元素的总数量。</p>
 <ul>
-<li><p>算法步骤<br><img src="/2019/08/16/page-5-1/1.png" alt="1"></p>
+<li><p>算法步骤<br><img src="/2019/08/16/page-6/1.png" alt="1"></p>
 </li>
 <li><p>代码实现</p>
 </li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.tongcaipay.merchant.apply.study;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">//希尔排序算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShellSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 缩小增量gap的范围</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> gap = arr.length / <span class="number">2</span>; gap &gt; <span class="number">0</span>; gap = gap / <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; arr.length; i++) &#123;</span><br><span class="line">                <span class="keyword">int</span> j = i;</span><br><span class="line">                <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                <span class="keyword">while</span> (j - gap &gt;= <span class="number">0</span> &amp;&amp; temp &lt; arr[j - gap]) &#123;</span><br><span class="line">                        arr[j] = arr[j - gap];</span><br><span class="line">                        j = j - gap;</span><br><span class="line">                    &#125;</span><br><span class="line">                    arr[j] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []arr = &#123;<span class="number">10</span>,<span class="number">10</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2.代码实现"></a>2.代码实现</h3><p><img src="/2019/08/16/page-5-1/2.png" alt="1"></p>
+<h3 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2.代码实现"></a>2.代码实现</h3><p><img src="/2019/08/16/page-6/2.png" alt="1"></p>
 <p>　 </p>
 
       
@@ -273,7 +273,7 @@
     
     <br>
     <strong>本文链接：</strong>
-    https://xiaolei19991030x.github.io/2019/08/16/page-5-1/
+    https://xiaolei19991030x.github.io/2019/08/16/page-6/
     <br>
     <strong>版权声明：</strong>
     本作品采用
@@ -395,7 +395,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://xiaolei19991030x.github.io/2019/08/16/page-5-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xiaolei19991030x.github.io/2019/08/16/page-6/" alt="微信分享二维码">
     </div>
 </div>
 

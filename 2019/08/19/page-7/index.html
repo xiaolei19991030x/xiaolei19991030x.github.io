@@ -6,14 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://xiaolei19991030x.github.io">
-  <title>O磊的blog</title>
+  <title>浅谈ArrayList | O磊的blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 浅谈ArrayListdate: 2019-08-19 10:44:52tags:    - 数据结构    - ArrayListtoc: truedeclare: true categories: “数据结构”一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
+  <meta name="description" content="一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
+<meta name="keywords" content="数据结构,ArrayList">
 <meta property="og:type" content="article">
-<meta property="og:title" content="O磊的blog">
+<meta property="og:title" content="浅谈ArrayList">
 <meta property="og:url" content="https://xiaolei19991030x.github.io/2019/08/19/page-7/index.html">
 <meta property="og:site_name" content="O磊的blog">
-<meta property="og:description" content="title: 浅谈ArrayListdate: 2019-08-19 10:44:52tags:    - 数据结构    - ArrayListtoc: truedeclare: true categories: “数据结构”一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
+<meta property="og:description" content="一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdn.net/20180331142445862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180331142413676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
@@ -21,10 +22,10 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20180331142309257?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180331143218324?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180331144636467?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2019-08-19T10:32:56.000Z">
+<meta property="og:updated_time" content="2019-08-19T10:43:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="O磊的blog">
-<meta name="twitter:description" content="title: 浅谈ArrayListdate: 2019-08-19 10:44:52tags:    - 数据结构    - ArrayListtoc: truedeclare: true categories: “数据结构”一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
+<meta name="twitter:title" content="浅谈ArrayList">
+<meta name="twitter:description" content="一、ArrayList的继承体系及性质1.ArrayList的继承体系ArrayList类继承AbstractList类，实现List等多个接口：">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20180331142445862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="O磊的blog" type="application/atom+xml">
@@ -180,17 +181,80 @@
             <article id="post-page-7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      浅谈ArrayList
+    </h1>
+  
+
+        
+        <a href="/2019/08/19/page-7/" class="archive-article-date">
+  	<time datetime="2019-08-19T10:39:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
+</a>
+	
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.3k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">5分钟</span>
+      </span>
+    </span>
+</div>
+          
+        
+
+	
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+	
+      </header>
+    
 	
 
 	
     <!-- 目录内容 -->
 
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、ArrayList的继承体系及性质"><span class="toc-number">1.</span> <span class="toc-text">一、ArrayList的继承体系及性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、ArrayList的方法使用和源码解析"><span class="toc-number">2.</span> <span class="toc-text">二、ArrayList的方法使用和源码解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、总结"><span class="toc-number">3.</span> <span class="toc-text">三、总结</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+      
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 浅谈ArrayList<br>date: 2019-08-19 10:44:52<br>tags:<br>    - 数据结构<br>    - ArrayList<br>toc: true<br>declare: true</p>
-<h2 id="categories-“数据结构”"><a href="#categories-“数据结构”" class="headerlink" title="categories: “数据结构”"></a>categories: “数据结构”</h2><h3 id="一、ArrayList的继承体系及性质"><a href="#一、ArrayList的继承体系及性质" class="headerlink" title="一、ArrayList的继承体系及性质"></a>一、ArrayList的继承体系及性质</h3><p>1.ArrayList的继承体系<br><font color="blue">ArrayList</font><font color="red">类</font>继承<font color="blue">AbstractList</font>类，实现<font color="blue">List</font>等多个接口：<br><img src="https://img-blog.csdn.net/20180331142445862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="2"></p>
+        <h3 id="一、ArrayList的继承体系及性质"><a href="#一、ArrayList的继承体系及性质" class="headerlink" title="一、ArrayList的继承体系及性质"></a>一、ArrayList的继承体系及性质</h3><p>1.ArrayList的继承体系<br><font color="blue">ArrayList</font><font color="red">类</font>继承<font color="blue">AbstractList</font>类，实现<font color="blue">List</font>等多个接口：<br><img src="https://img-blog.csdn.net/20180331142445862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="2"></p>
 <a id="more"></a>
 
 <p><font color="blue">AbstractList</font><font color="red">类</font>又继承<font color="blue">AbstractCollection</font>类，实现<font color="blue">List</font>接口：<br><img src="https://img-blog.csdn.net/20180331142413676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY1NzczMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="3"></p>
@@ -243,7 +307,24 @@
       
 	
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong>本文作者：</strong>
+    
+      demons
+    
+    <br>
+    <strong>本文链接：</strong>
+    https://xiaolei19991030x.github.io/2019/08/19/page-7/
+    <br>
+    <strong>版权声明：</strong>
+    本作品采用
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    进行许可。转载请注明出处！
+    
+      <br>
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+    
+  </div>
 
       
         <div class="page-reward">
@@ -283,7 +364,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ArrayList</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/排序算法//" class="article-tag-list-link color5">排序算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -369,6 +476,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、ArrayList的继承体系及性质"><span class="toc-number">1.</span> <span class="toc-text">一、ArrayList的继承体系及性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、ArrayList的方法使用和源码解析"><span class="toc-number">2.</span> <span class="toc-text">二、ArrayList的方法使用和源码解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、总结"><span class="toc-number">3.</span> <span class="toc-text">三、总结</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -388,7 +508,7 @@
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "",
+  id: "浅谈ArrayList",
   owner: 'xiaolei19991030x',
   repo: 'xiaolei19991030x.github.io',
   oauth: {
@@ -523,6 +643,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ArrayList</a>
               </li>
              
               <li class="article-tag-list-item">

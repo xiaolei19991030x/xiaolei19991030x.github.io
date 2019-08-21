@@ -189,7 +189,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">752字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
 
@@ -198,7 +198,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分钟</span>
+        <span class="post-count">4分钟</span>
       </span>
     </span>
 </div>
@@ -248,9 +248,23 @@
 <p>现在如银行、医院等地方，设置了排队系统，也就是每个人去了，先领一个号，等着叫号，叫到时去办理业务或看病。在等待的时候，你爱在哪在哪，可以坐着、站着或者走动，甚至出去逛一圈，只要及时回来就行。你关注的是前一个号有没有被叫到，叫到了，下一个就轮到了。</p>
 <p><img src="/2019/08/21/page-9/8.png" alt="8"></p>
 <h4 id="1-7抽象数据类型"><a href="#1-7抽象数据类型" class="headerlink" title="1.7抽象数据类型"></a>1.7抽象数据类型</h4><p>事实上，抽象数据类型体现了程序设计中问题分解、抽象和信息隐藏的特性。抽象数据类型把实际生活中的问题分解为多个规模小且容易处理的问题，然后建立一个计算机能处理的数据模型，并把每个功能模块的实现细节作为一个独立的单元，从而使具体实现过程隐藏起来。</p>
-<h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><p><img src="/2019/08/21/page-9/9.png" alt="9"></p>
+<h2 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h2><p><img src="/2019/08/21/page-9/9.png" alt="9"></p>
 <p><img src="/2019/08/21/page-9/10.png" alt="10"></p>
-
+<h2 id="第二章-算法"><a href="#第二章-算法" class="headerlink" title="第二章 算法"></a>第二章 算法</h2><p>算法：算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且每条指令表示一个或多个操作。</p>
+<p>为了解决某个或某类问题，需要把指令表示成一定的操作序列，操作序列包括一组操作，每一个操作都完成特定的功能，这就是算法了。</p>
+<p>算法具有五个基本特性：输人、输出、有穷性、确定性和可行性。</p>
+<p>####算法时间复杂度定义####</p>
+<blockquote>
+<p>在进行算法分析时，语句总的执行次数T（n）是关于问题规模n的函数，进而分析T（n）随n的变化情况并确定T（n）的数量级。算法的时间复杂度，也就是算法的时间量度，记作：T（n）=O(f(n))0它表示随问题规模n的增大，算法执行时间的增长率和f（n）的增长率相同，称作算法的渐近时间复杂度，简称为时间复杂度。其中f（n）是问题规模n的某个函数。</p>
+</blockquote>
+<p>####常见的时间复杂度####<br><img src="/2019/08/21/page-9/11.png" alt="11"><br>记住logN &gt; 1；   2^n  &lt; n! &lt; n^n 就好理解了;</p>
+<p>####第二章总结####<br>算法的定义：算法是解决特定问题求解步骤的描述，在计算机中为指令的有限序列，并且每条指令表示一个或多个操作。</p>
+<p>算法的特性：有穷性、确定性、可行性、输人、输出。</p>
+<p>算法的设计的要求：正确性、可读性、健壮性、高效率和低存储量需求。</p>
+<p>算法特性与算法设计容易混，需要对比记忆。</p>
+<p>算法的度量方法：事后统计方法（不科学、不准确）、事前分析估算方法。在讲解如何用事前分析估算方法之前，我们先给出了函数渐近增长的定义。函数的渐近增长：给定两个函数f(n)和g(n)，如果存在一个整数N，使得对于所有的n&gt;N，f〔n〕总是比g〔n)大，那么，我们说f〔n)的增长渐近快于g〔n)。于是我们可以得出一个结论，判断一个算法好不好，我们只通过少量的数据是不能做出准确判断的，如果我们可以对比算法的关键执行次数函数的渐近增长性，基本就可以分析出：</p>
+<p>某个算法，随着n的变大，它会越来越优于另一算法，或者越来越差于另一算法。</p>
+<h2 id="第三章-线性表"><a href="#第三章-线性表" class="headerlink" title="第三章 线性表"></a>第三章 线性表</h2>
       
 	
 
@@ -954,14 +968,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LinkList</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">循环链表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -987,6 +993,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LinkList</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">循环链表</a>
               </li>
              
               <li class="article-tag-list-item">

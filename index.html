@@ -168,6 +168,155 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-page-9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/21/page-9/">大话数据结构学习笔记（一）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/21/page-9/" class="archive-article-date">
+  	<time datetime="2019-08-21T06:23:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-21</time>
+</a>
+	
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">759字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分钟</span>
+      </span>
+    </span>
+</div>
+          
+        
+
+	
+      </header>
+    
+	
+
+	
+    <!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>补充基础知识～</p>
+<p>数据结构这门课程在以前学习过，但是由于当时学得比较一般就感觉并没有学到什么，于是在朋友的推荐下看《大话数据结构》，对于我这种小白来说是很友好的。整本书都感觉很通俗易懂，不像以前那样几乎看不懂。</p>
+<p><img src="/2019/08/21/page-9/1.png" alt="1"></p>
+</blockquote>
+<h3 id="第一章-数据结构绪论"><a href="#第一章-数据结构绪论" class="headerlink" title="第一章 数据结构绪论"></a>第一章 数据结构绪论</h3><p>程序 = 数据结构 + 算法   </p>
+<h4 id="1-4-1-数据（data"><a href="#1-4-1-数据（data" class="headerlink" title="1.4.1 数据（data)"></a>1.4.1 数据（data)</h4><p>数据：是描述客观事物的符号，是计算机中可操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。</p>
+<h4 id="1-4-2-数据元素（data-element）"><a href="#1-4-2-数据元素（data-element）" class="headerlink" title="1.4.2 数据元素（data element）"></a>1.4.2 数据元素（data element）</h4><p>是组成数据的，有一定意义的基本单位，在计算机中通常作为整理处理，也被成为记录。</p>
+<h4 id="1-4-3-数据项（data-item）"><a href="#1-4-3-数据项（data-item）" class="headerlink" title="1.4.3 数据项（data item）"></a>1.4.3 数据项（data item）</h4><p>数据项：一个数据可以由若干个数据项组成；<br>数据项是数据不可分割的最小单位</p>
+<h4 id="1-4-4-数据对象-data-object"><a href="#1-4-4-数据对象-data-object" class="headerlink" title="1.4.4 数据对象(data object)"></a>1.4.4 数据对象(data object)</h4><p>数据对象：是性质相同的数据元素的集合，是数据的子集。</p>
+<h4 id="1-4-5-数据结构"><a href="#1-4-5-数据结构" class="headerlink" title="1.4.5 数据结构"></a>1.4.5 数据结构</h4><p>数据结构：是相互之间存在一种或多种特定关系的数据元素集合</p>
+<p>总结一下它们之间的关系：<br><img src="/2019/08/21/page-9/2.png" alt="2"></p>
+<h4 id="1-5-逻辑结构与物理结构"><a href="#1-5-逻辑结构与物理结构" class="headerlink" title="1.5 逻辑结构与物理结构"></a>1.5 逻辑结构与物理结构</h4><h4 id="1-5-1-逻辑结构"><a href="#1-5-1-逻辑结构" class="headerlink" title="1.5.1 逻辑结构"></a>1.5.1 逻辑结构</h4><p> 1.集合结构</p>
+<p>集合结构：集合结构中的数据元素除了同属于一个集合外，没有其他关系。</p>
+<p><img src="/2019/08/21/page-9/3.png" alt="3"></p>
+<p> 2.线性结构</p>
+<p>线性结构：线性结构中的数据元素是一对一的关系.</p>
+<p><img src="/2019/08/21/page-9/4.png" alt="4"></p>
+<p>3.树形结构</p>
+<p>树形结构：树形结构中的数据元素之间存在一种一对多的层次关系</p>
+<p><img src="/2019/08/21/page-9/5.png" alt="5"></p>
+<p>4.图形结构</p>
+<p>图形结构: 图形结构的数据元素是多对多的关系</p>
+<p><img src="/2019/08/21/page-9/6.png" alt="6"></p>
+<h4 id="1-5-2-物理结构"><a href="#1-5-2-物理结构" class="headerlink" title="1.5.2 物理结构"></a>1.5.2 物理结构</h4><p>物理结构：是指数据的逻辑结构在计算机中的存储形式。</p>
+<p>1.顺序存储结构</p>
+<p>开辟一段连续的空间，依次按顺序存放数据元素</p>
+<p><img src="/2019/08/21/page-9/7.png" alt="7"></p>
+<p>2.链式存储结构</p>
+<p>现在如银行、医院等地方，设置了排队系统，也就是每个人去了，先领一个号，等着叫号，叫到时去办理业务或看病。在等待的时候，你爱在哪在哪，可以坐着、站着或者走动，甚至出去逛一圈，只要及时回来就行。你关注的是前一个号有没有被叫到，叫到了，下一个就轮到了。</p>
+<p><img src="/2019/08/21/page-9/8.png" alt="8"></p>
+<h4 id="1-6抽象数据类型"><a href="#1-6抽象数据类型" class="headerlink" title="1.6抽象数据类型"></a>1.6抽象数据类型</h4><p>事实上，抽象数据类型体现了程序设计中问题分解、抽象和信息隐藏的特性。抽象数据类型把实际生活中的问题分解为多个规模小且容易处理的问题，然后建立一个计算机能处理的数据模型，并把每个功能模块的实现细节作为一个独立的单元，从而使具体实现过程隐藏起来。</p>
+<h4 id="第一章总结"><a href="#第一章总结" class="headerlink" title="第一章总结"></a>第一章总结</h4><p><img src="/2019/08/21/page-9/9.png" alt="9"></p>
+<p><img src="/2019/08/21/page-9/10.png" alt="10"></p>
+
+      
+	
+
+  <div class="declare" hidden="hidden"></div>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/21/page-9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-page-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -657,124 +806,6 @@
 
 
   
-    <article id="post-page-4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/15/page-4/">排序算法—归并排序</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/15/page-4/" class="archive-article-date">
-  	<time datetime="2019-08-15T03:20:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-15</time>
-</a>
-	
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">828字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">3分钟</span>
-      </span>
-    </span>
-</div>
-          
-        
-
-	
-      </header>
-    
-	
-
-	
-    <!-- 目录内容 -->
-
-<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>归并排序是建立在归并操作上的一种有效的排序算法，该算法是采用<strong>分治法（Divide and Conquer）</strong>的一个非常典型的应用。</p>
-        
-          <a class="article-more-a" href="/2019/08/15/page-4/#more">more >></a>
-        
-      
-	
-
-  <div class="declare" hidden="hidden"></div>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/排序算法//" class="article-tag-list-link color5">排序算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/15/page-4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -916,6 +947,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数组</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">

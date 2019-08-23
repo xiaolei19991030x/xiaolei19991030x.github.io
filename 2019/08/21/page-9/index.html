@@ -34,7 +34,8 @@
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/21/page-9/16.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/21/page-9/17.png">
 <meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/21/page-9/18.png">
-<meta property="og:updated_time" content="2019-08-22T11:59:28.000Z">
+<meta property="og:image" content="https://xiaolei19991030x.github.io/2019/08/21/page-9/19.png">
+<meta property="og:updated_time" content="2019-08-23T05:48:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大话数据结构学习笔记（一）">
 <meta name="twitter:description" content="补充基础知识～ 数据结构这门课程在以前学习过，但是由于当时学得比较一般就感觉并没有学到什么，于是在朋友的推荐下看《大话数据结构》，对于我这种小白来说是很友好的。整本书都感觉很通俗易懂，不像以前那样几乎看不懂。   第一章 数据结构绪论程序 = 数据结构 + 算法    1.1 数据（data)是描述客观事物的符号，是计算机中可操作的对象，是能被计算机识别，并输入给计算机处理的符号集合。 1.2">
@@ -211,7 +212,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">3k字</span>
+        <span class="post-count">3.7k字</span>
       </span>
     </span>
 
@@ -220,7 +221,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">11分钟</span>
+        <span class="post-count">14分钟</span>
       </span>
     </span>
 </div>
@@ -375,18 +376,44 @@
 <h3 id="2、线性表的链式存储结构"><a href="#2、线性表的链式存储结构" class="headerlink" title="2、线性表的链式存储结构"></a>2、线性表的链式存储结构</h3><p><img src="/2019/08/21/page-9/17.png" alt="17"></p>
 <p>对于线性表来说，总得有个头有个尾，链表也不例外。我们把链表中的第一个结点的存储位置叫做头指针，最后一个结点指针为空(NULL)。</p>
 <p>在顺序存储结构中，有随机存储结构的特点，计算任意一个元素的存储位置是很容易的，但是在单链表中，想知道其中一个元素的位置，就得从第一个结点开始遍历，因此，对于单链表实现获取第i个元素的数据的操作，在算法上较为复杂。</p>
-<p>获取链表第i个数据的算法思路：</p>
+<p><strong>用java语言描述链式存储结构</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 　定义一个节点结点Node</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">	E data;  <span class="comment">//数据域</span></span><br><span class="line">	Node&lt;E&gt; next;  <span class="comment">//指针域</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(E data, Node&lt;E&gt; next)</span> </span>&#123;</span><br><span class="line">	   <span class="keyword">this</span>.data = data;</span><br><span class="line">	   <span class="keyword">this</span>.next = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>算法思路：</p>
 <ul>
 <li>声明一个节点p指向链表第一个节点，初始化j从1开始；</li>
-<li>当j&lt;i时， 遍历链表，让p的指针向后移动，不断指向下一个节点，j+1；</li>
+<li>当j&lt;i时， 遍历链表，让p的指针向后移动，不断指向下一个节点，j++；</li>
 <li>若到链表末尾p为空，则说明第i个元素不存在；</li>
 <li>否则查找成功，返回节点p的数据；</li>
 </ul>
 <p><strong>单链表数据的获取：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">(Integer index)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (T)getNode(index).getObject();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> Node&lt;T&gt; <span class="title">getNode</span><span class="params">(Integer index)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (index &gt; size || index &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"index outof length"</span>);</span><br><span class="line">    Node&lt;T&gt; p = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; index; i++)</span><br><span class="line">        p = p.next;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">index</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(index==<span class="number">0</span>)&#123;</span><br><span class="line">         <span class="comment">//头一个结点下标为0</span></span><br><span class="line">         current=head;</span><br><span class="line">         </span><br><span class="line">         <span class="keyword">return</span> current;</span><br><span class="line">         <span class="comment">//删除后链表为空</span></span><br><span class="line">     &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         current=head;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; index - <span class="number">1</span>;i++)&#123;</span><br><span class="line">             current=current.next;</span><br><span class="line">             <span class="comment">//因为current.next赋值给了current，所以要设置为index-1</span></span><br><span class="line">         &#125;</span><br><span class="line">         </span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">return</span> current;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>单链表数据的插入：</strong></p>
-<p><img src="/2019/08/21/page-9/18.png" alt="18"></p>
+<p><strong>单链表的插入：</strong><br><img src="/2019/08/21/page-9/18.png" alt="18"><br>算法思路：</p>
+<ul>
+<li>声明一个指针p指向链表的第一个结点，初始化j从1开始</li>
+<li>当j&lt;i时，就遍历链表，让p指针向后移动一位，不断地指向下一个结点，j++；</li>
+<li>若到链表末尾p为空，则说明第i个结点不存在</li>
+<li>否则查找成功，在系统中生成一个空节点s</li>
+<li>将数据元素e赋值给s-&gt;data</li>
+<li>单链表的插入标准语句，s-&gt;next = p-&gt;next,p-&gt;next=s;</li>
+<li>返回成功</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 获取第i个结点（包括第0个结点，头结点）</span></span><br><span class="line"><span class="comment">  * 获取结点值只需要GetNode(i).data即可，不再写方法了</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Node&lt;E&gt; <span class="title">GetNode</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt; count) &#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"元素位置错误！"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">   		 <span class="keyword">return</span> head;    <span class="comment">//第0个节点为head</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;   <span class="comment">//1 &lt;= i &lt;= count</span></span><br><span class="line">	    Node&lt;E&gt; node = head.next;</span><br><span class="line">	    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; i; k++) &#123;</span><br><span class="line">	    	node = node.next;</span><br><span class="line">	    &#125;</span><br><span class="line">	    <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 第i个位置插入新的元素</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ListInsert</span><span class="params">(<span class="keyword">int</span> i, E e)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">1</span> || i &gt; count + <span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"插入位置错误！"</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		Node&lt;E&gt; newNode = <span class="keyword">new</span> Node&lt;E&gt;(e, <span class="keyword">null</span>);</span><br><span class="line">		newNode.next = GetNode(i - <span class="number">1</span>).next;  <span class="comment">//因为GetNode()方法中包含了获取头结点，所以不需单独判断了</span></span><br><span class="line">		GetNode(i - <span class="number">1</span>).next = newNode;</span><br><span class="line">		count++;</span><br><span class="line">		System.out.println(<span class="string">"插入成功！"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>单链表的删除：</strong><br><img src="/2019/08/21/page-9/19.png" alt="19"><br>算法思路：</p>
+<ul>
+<li>一个指针p指向链表的第一个结点，初始化j从1开始</li>
+<li>当j&lt;i时，就遍历链表，让p指针向后移动一位，不断地指向下一个结点，j++；</li>
+<li>若到链表末尾p为空，则说明第i个结点不存在</li>
+<li>否则，查找成功，将欲删除的结点p-&gt;next赋给q</li>
+<li>单链表的删除标准语句p-&gt;next=q-&gt;next</li>
+<li>将q结点中的数据赋给e，作为返回</li>
+<li>释放q结点</li>
+<li>返回成功</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 获取第i个结点（包括第0个结点，头结点）</span></span><br><span class="line"><span class="comment">  * 获取结点值只需要GetNode(i).data即可，不再写方法了</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Node&lt;E&gt; <span class="title">GetNode</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt; count) &#123;</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"元素位置错误！"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">   		 <span class="keyword">return</span> head;    <span class="comment">//第0个节点为head</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;   <span class="comment">//1 &lt;= i &lt;= count</span></span><br><span class="line">	    Node&lt;E&gt; node = head.next;</span><br><span class="line">	    <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt; i; k++) &#123;</span><br><span class="line">	    	node = node.next;</span><br><span class="line">	    &#125;</span><br><span class="line">	    <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 删除第i个位置元素，并返回其值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">ListDelete</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">1</span> || i &gt; count)</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"删除位置错误！"</span>);</span><br><span class="line">	Node&lt;E&gt; node = GetNode(i);</span><br><span class="line">   E e = node.data;</span><br><span class="line">   GetNode(i - <span class="number">1</span>).next = node.next;</span><br><span class="line">   node = <span class="keyword">null</span>;</span><br><span class="line">   count--;</span><br><span class="line">   System.out.println(<span class="string">"删除成功!"</span>);</span><br><span class="line">   <span class="keyword">return</span> e;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 	
@@ -746,6 +773,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
@@ -771,10 +802,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">

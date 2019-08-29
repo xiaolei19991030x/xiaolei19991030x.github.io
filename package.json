@@ -6,6 +6,8 @@
     "version": "3.9.0"
   },
   "dependencies": {
+    "ajv": "^5.5.2",
+    "eslint": "^4.19.1",
     "gitment": "0.0.3",
     "hexo": "^3.9.0",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
@@ -22,6 +24,8 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
     "hexo-wordcount": "^6.0.1",
-    "live2d-widget-model-hijiki": "^1.0.5"
+    "imagemin": "^5.0.0",
+    "live2d-widget-model-hijiki": "^1.0.5",
+    "lodash": "^4.17.15"
   }
 }

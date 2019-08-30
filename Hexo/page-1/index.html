@@ -109,13 +109,12 @@
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/9.png">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/10.png">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/11.png">
-<meta property="og:image" content="https://bbsmax.ikafan.com/static/L3Byb3h5L2h0dHAvaW1hZ2VzMjAxNy5jbmJsb2dzLmNvbS9ibG9nLzkwMDc0MC8yMDE3MDgvOTAwNzQwLTIwMTcwODIwMjM1NjQ5NDU5LTc3OTkyNDU2My5wbmc=.jpg">
+<meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/18.png">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/12.png">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/3.jpg">
-<meta property="og:image" content="https://bbsmax.ikafan.com/static/L3Byb3h5L2h0dHAvaW1hZ2VzMjAxNy5jbmJsb2dzLmNvbS9ibG9nLzkwMDc0MC8yMDE3MDgvOTAwNzQwLTIwMTcwODIxMDAxMzQwNjMxLTE5MDA1MTExNTQucG5n.jpg">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/13.png">
 <meta property="og:image" content="//xiaolei19991030x.github.io/Hexo/page-1/14.png">
-<meta property="og:updated_time" content="2019-08-30T08:08:47.110Z">
+<meta property="og:updated_time" content="2019-08-30T09:43:13.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github+hexo＋yilia搭建自己的博客网站（一）基础入门">
 <meta name="twitter:description" content="前言：最近在学习数据结构的排序算法的时候想尝试写博客，于是在网上翻阅了许多写博客网站，比如CSDN、简书、github等等，相比较之后发现还是在github上搭建自己的博客挺有趣的，翻阅了无数的资料，这其中遇到了很多困难，但最终还是成功了，所以接下来给大家分享一下如何在mac笔记本上搭建自己的博客。">
@@ -523,7 +522,7 @@
 <p>测试一下是否成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com  //注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://bbsmax.ikafan.com/static/L3Byb3h5L2h0dHAvaW1hZ2VzMjAxNy5jbmJsb2dzLmNvbS9ibG9nLzkwMDc0MC8yMDE3MDgvOTAwNzQwLTIwMTcwODIwMjM1NjQ5NDU5LTc3OTkyNDU2My5wbmc=.jpg" alt></p>
+<p><img src="//xiaolei19991030x.github.io/Hexo/page-1/18.png" alt="18"></p>
 <p>看到这个信息说明SSH已配置成功！</p>
 <p>2.设置Git的user name和email</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;xiaolei19991030x&quot;        // 你的github用户名，非昵称</span><br><span class="line"></span><br><span class="line">git config --global user.email  &quot;1784640836@qq.com&quot;     // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
@@ -545,7 +544,7 @@
 
 <p>这时打开你的在浏览器上看输入<a href>https://yourgithubname.github.io/</a>就可以看啦，当然如果看到你想到的效果，这可能是github需要一定的时间部署，等一会儿看有没有变成你想要的样子。</p>
 <p>自己的github的page，显示如下<br><img src="//xiaolei19991030x.github.io/Hexo/page-1/3.jpg" alt="3"></p>
-<p>同时，你的github上的项目，代码已经更新。(这是网上找的图）<br><img src="https://bbsmax.ikafan.com/static/L3Byb3h5L2h0dHAvaW1hZ2VzMjAxNy5jbmJsb2dzLmNvbS9ibG9nLzkwMDc0MC8yMDE3MDgvOTAwNzQwLTIwMTcwODIxMDAxMzQwNjMxLTE5MDA1MTExNTQucG5n.jpg" alt></p>
+<p>同时，你的github上的项目，代码已经更新。</p>
 <h3 id="四、保留CNAME、README-md等文件"><a href="#四、保留CNAME、README-md等文件" class="headerlink" title="四、保留CNAME、README.md等文件"></a>四、保留CNAME、README.md等文件</h3><p>提交之后网页上一看，发现以前其它代码都没了，此时不要慌，一些非md文件可以把他们放到source文件夹下，这里的所有文件都会原样复制（除了md文件）到public目录。</p>
 <p>由于hexo默认会把所有md文件都转换成html，包括README.md，所有需要每次生成之后、上传之前，手动将README.md复制到public目录，并删除README.html。        </p>
 <h3 id="五、修改hexo的主题"><a href="#五、修改hexo的主题" class="headerlink" title="五、修改hexo的主题"></a>五、修改hexo的主题</h3><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。</p>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>O�ڵĲ���</title>
+  <title>O磊的博客</title>
   
-  <subtitle>�����ռ�</subtitle>
+  <subtitle>代码日记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/"/>
+  <link href="https%EF%BC%9A//xiaolei19991030x.github.io/"/>
   <updated>2019-08-30T09:46:29.749Z</updated>
-  <id>https��//xiaolei19991030x.github.io/</id>
+  <id>https：//xiaolei19991030x.github.io/</id>
   
   <author>
     <name>demons</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>github+hexo＋yilia搭建自己的博客网站（一）基础入门</title>
-    <link href="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/Hexo/page-1/"/>
-    <id>https��//xiaolei19991030x.github.io/Hexo/page-1/</id>
+    <link href="https%EF%BC%9A//xiaolei19991030x.github.io/Hexo/page-1/"/>
+    <id>https：//xiaolei19991030x.github.io/Hexo/page-1/</id>
     <published>2019-08-30T07:35:20.000Z</published>
     <updated>2019-08-30T09:46:29.749Z</updated>
     
@@ -31,22 +31,22 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/categories/Hexo/"/>
     
     
-      <category term="node" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/node/"/>
+      <category term="node" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/node/"/>
     
-      <category term="Git" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/Git/"/>
+      <category term="Git" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/Git/"/>
     
-      <category term="Hexo" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/Hexo/"/>
     
-      <category term="SSH" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/SSH/"/>
+      <category term="SSH" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/SSH/"/>
     
-      <category term="github page" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/github-page/"/>
+      <category term="github page" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/github-page/"/>
     
-      <category term="yilia" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/yilia/"/>
+      <category term="yilia" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/yilia/"/>
     
-      <category term="博客搭建" scheme="https%EF%BF%BD%EF%BF%BD//xiaolei19991030x.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   

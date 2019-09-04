@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https%EF%BC%9A//xiaolei19991030x.github.io/"/>
-  <updated>2019-09-04T15:35:55.670Z</updated>
+  <updated>2019-09-04T15:44:43.002Z</updated>
   <id>https：//xiaolei19991030x.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Web学习——用Intellij Idea 创建Web项目</title>
+    <link href="https%EF%BC%9A//xiaolei19991030x.github.io/Java-Web/page-12/"/>
+    <id>https：//xiaolei19991030x.github.io/Java-Web/page-12/</id>
+    <published>2019-09-04T15:37:06.000Z</published>
+    <updated>2019-09-04T15:44:43.002Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>相关软件：</p><ul><li>Intellij Idea  破解教程：<a href="https://jinphy.github.io/2018/08/22/idea-tutorial/" target="_blank" rel="noopener">戳这!!!</a></li><li>JDK 1.6/1.7/1.8都可以</li><li>tomcat 7以上都可以,去官网下载压缩包解压即可 链接：<a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://tomcat.apache.org/</a><a id="more"></a></li></ul><h3 id="一、创建简单web项目"><a href="#一、创建简单web项目" class="headerlink" title="一、创建简单web项目"></a>一、创建简单web项目</h3><ul><li><p>File -&gt; New Project -&gt; 选择你的Project SDK（我的是1.8）-&gt; Next </p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/1.png" alt="1"></p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/2.png" alt="2"></p></li><li><p>输入项目名：webDemo -&gt; Next -&gt; Finish</p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/3.png" alt="3"></p></li></ul><h3 id="二、创建一个Module"><a href="#二、创建一个Module" class="headerlink" title="二、创建一个Module"></a>二、创建一个Module</h3><ul><li>鼠标点中项目名称webDemo -&gt; 右键选择New，选择 Module -&gt; Module SDK 选择1. -&gt; 勾选JavaEE下的Web Application(4.0)，注意窗口下的version对应为4.0，且Create web.xml已勾选 -&gt; Next</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/4.png" alt="4"></p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/5.png" alt="5"></p><ul><li>输入Module name 为firstweb -&gt; Finish</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/6.png" alt="6"></p><ul><li>创建好的web项目</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/7.png" alt="7"></p><ul><li>在web/WEB_INF 目录下创建两个文件夹：classes和lib,classes用来存放编译后输出的class文件，lib用于存放第三方jar包</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/8.png" alt="8"></p><ul><li>配置文件夹路径</li></ul><p>File -&gt; Project Structure (ctrl + shift + Alt + s) 或者使用工具栏的快捷键 -&gt; 选择Modules</p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/9.png" alt="9"></p><ul><li>选择Paths -&gt; 选择“Use module compile out path” -&gt; 将Outputpath 和Test output path 都设置为刚刚创建的classes文件夹的路径。</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/10.png" alt="10"></p><ul><li>选择当前窗口的Dependencies -&gt; 将Module SDK选择为1.8 -&gt; 点击下边的 + 号 -&gt; 选择 “1 JARS or directories …”</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/11.png" alt="11"></p><ul><li>选择刚刚创建的lib文件夹 -&gt; OK</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/12.png" alt="12"></p><ul><li>选择Jar Directory -&gt; OK</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/13.png" alt="13"></p><ul><li>Apply -&gt; OK</li></ul><h3 id="三、配置Tomcat容器"><a href="#三、配置Tomcat容器" class="headerlink" title="三、配置Tomcat容器"></a>三、配置Tomcat容器</h3><ul><li>打开菜单Run -&gt; Edit Configurations…</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/14.png" alt="14"></p><ul><li>点击 “+” ，选择 “Tomcat Server” -&gt; 选择“Local”</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/15.png" alt="15"></p><ul><li>在”Name”处输入新的服务名，点击”Application server”后面的”Configure…”，弹出Tomcat Server窗口，选择本地安装的Tomcat目录 -&gt; OK </li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/16.png" alt="16"></p><h3 id="四、在tomcat上部署并运行项目"><a href="#四、在tomcat上部署并运行项目" class="headerlink" title="四、在tomcat上部署并运行项目"></a>四、在tomcat上部署并运行项目</h3><ul><li>选择Deployment -&gt; 点击下面的“+”号 -&gt; 选择Artifact</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/17.png" alt="17"></p><ul><li>选择web项目 -&gt; Application context可以填“/firstweb”(访问项目用，也可以不填) -&gt; OK </li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/18.png" alt="18"></p><ul><li>回到Server面板,勾选取消“After Launch”，设置“HTTP port”和“JMX port”（默认值即可），将On ‘update’ action和On frame deactivation（这两个选项是tomcat配置了项目后才有的）改为update classes and resources -&gt; Apply</li></ul><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/19.png" alt="19"></p><h3 id="五、开发web项目并运行tomcat查看效果"><a href="#五、开发web项目并运行tomcat查看效果" class="headerlink" title="五、开发web项目并运行tomcat查看效果"></a>五、开发web项目并运行tomcat查看效果</h3><p>1、编辑index.jsp页面</p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/20.png" alt="20"></p><p>2、运行Tomcat</p><p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/21.png" alt="21"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相关软件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intellij Idea  破解教程：&lt;a href=&quot;https://jinphy.github.io/2018/08/22/idea-tutorial/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;戳这!!!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JDK 1.6/1.7/1.8都可以&lt;/li&gt;
+&lt;li&gt;tomcat 7以上都可以,去官网下载压缩包解压即可 链接：&lt;a href=&quot;http://tomcat.apache.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://tomcat.apache.org/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Java Web" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/categories/Java-Web/"/>
+    
+    
+      <category term="Java Web" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/Java-Web/"/>
+    
+      <category term="tomcat" scheme="https%EF%BC%9A//xiaolei19991030x.github.io/tags/tomcat/"/>
+    
+  </entry>
   
   <entry>
     <title>大话数据结构（三）— 栈的两种java实现方式</title>

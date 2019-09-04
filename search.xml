@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[排序算法—希尔排序]]></title>
+    <url>%2F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2Fpage-6%2F</url>
+    <content type="text"><![CDATA[1.基本思想希尔排序的基本思想就是：将需要排序的序列划分为若干个较小的序列，对这些序列进行直接插入排序，通过这样的操作可使需要排序的数列基本有序，最后再使用一次直接插入排序。 在希尔排序中首先要解决的是怎样划分序列，对于子序列的构成不是简单地分段，而是采取将相隔某个增量的数据组成一个序列。一般选择增量的规则是：取上一个增量的一半作为此次子序列划分的增量，一般初始值元素的总数量。 算法步骤 代码实现 1234567891011121314151617181920212223242526272829package com.tongcaipay.merchant.apply.study;import java.util.Arrays;//希尔排序算法public class ShellSort &#123; public static void sort(int[] arr) &#123; // 缩小增量gap的范围 for (int gap = arr.length / 2; gap &gt; 0; gap = gap / 2) &#123; for (int i = gap; i &lt; arr.length; i++) &#123; int j = i; int temp = arr[j]; while (j - gap &gt;= 0 &amp;&amp; temp &lt; arr[j - gap]) &#123; arr[j] = arr[j - gap]; j = j - gap; &#125; arr[j] = temp; &#125; &#125; &#125; public static void main(String[] args) &#123; int []arr = &#123;10,10,4,8,9,6,5&#125;; sort(arr); System.out.println(Arrays.toString(arr)); &#125;&#125; 2.代码实现]]></content>
+      <categories>
+        <category>排序算法</category>
+      </categories>
+      <tags>
+        <tag>排序算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[排序算法－快速排序]]></title>
     <url>%2F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%2Fpage-5%2F</url>
     <content type="text"><![CDATA[快速排序算法是冒泡排序的一种改进，快速排序也是通过逐渐消除待排序的无序序列中逆序元素来实现排序的。 1.算法思想(1) 我们从待排序的记录序列中选取一个记录(通常第一个)作为基准元素(称为temp) temp = arr[low]，然后设置两个变量，low指向数列的最左部，high指向数据的最右部。 (2) temp首先与 arr[high] 进行比较，如果 arr[high] &lt; temp，则arr[low] = arr[high] 将 high 的值赋值给low;如果arr[high] &gt; temp则我们只需要将 high–(high向左移动)。high– 之后，再拿arr[hirh]与temp进行比较，直到arr[high] &lt; temp交换元素为止。 (3) 如果右边存在arr[high] &lt; temp的情况，将arr[low] = arr[high]，接下来，将转向low端，拿arr[low]与temp进行比较，如果arr[low] &gt; temp,则将arr[high] = arr[low]，如果arr[low] &lt; temp，则只需要将 low++,然后再进行arr[low] 与 temp的比较。 (4) 然后再移动high重复上述步骤 (5) 最后得到 {23 58 13 10 57 62} 65 {106 78 95 85}，再对左子数列与右子数列进行同样的操作。最终得到一个有序的数列。 2.算法实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354package com.tongcaipay.merchant.apply.study;import java.util.Arrays;public class quickSort &#123; /** * 定义一个要排序的数组 arr[low...high] * @param low 数组arr[]的左下标 * @param high 数组arr[]的右下标 */ /*对数组arr[low...high]进行排序*/ private static void quickSort(int[] arr, int low, int high) &#123; if (low &lt; high) &#123; //对数组进行分割，取出下次分割的基准标号 int index = getIndex(arr, low, high); //算出枢轴值index quickSort(arr, low, index - 1); //对index左侧对数组进行递归切割 quickSort(arr, index + 1, high); //对index右侧对数组进行递归切割 &#125; &#125; private static int getIndex(int[] arr, int low, int high) &#123; int temp = arr[low]; //用数组的第一个作为基准数据 while (low &lt; high) &#123; //当队尾元素大于等于temp时，下标high向前移动 while (low &lt; high &amp;&amp; arr[high] &gt;= temp) &#123; high--; &#125; //当队尾元素小于temp时，将其赋值给low; //当队首元素小于等于temp时，下标low向后移动 while (low &lt; high &amp;&amp; arr[low] &lt;= temp) &#123; low++; &#125; //当队首元素大于temp时，将其赋值给high arr[high] = arr[low]; &#125; arr[high] = arr[low] = temp; //此时high = low return high; // 返回tmp的正确位置 //return low; &#125; public static void main(String[] args) &#123; int arr[] = &#123;23, 58, 13, 10, 57, 62, 106, 78,95,85&#125;; System.out.println("排序前："+Arrays.toString(arr)+" "); quickSort(arr, 0, arr.length - 1); System.out.println("排序后："+Arrays.toString(arr)+" "); &#125;&#125; 运行结果：]]></content>

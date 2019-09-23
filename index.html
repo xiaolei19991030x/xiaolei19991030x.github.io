@@ -307,6 +307,245 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https：//xiaolei19991030x.github.io/OpenGL/page-13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="demons">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/user.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="O磊的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/OpenGL/page-13/" itemprop="url">如何在VC++6.0上搭建OpenGL开发环境</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-23T22:18:25+08:00">
+                2019-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenGL/" itemprop="url" rel="index">
+                    <span itemprop="name">OpenGL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/OpenGL/page-13/" class="leancloud_visitors" data-flag-title="如何在VC++6.0上搭建OpenGL开发环境">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  771
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>OPenGL(Open Graphics Library)是一个跨编程语言、跨平台的编程接口规格的专业的图形程序接口。是一个功能强大，调用方便的底层图形库。下面来介绍如何在VC++6.0上搭建OpenGL开发环境。</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
+<li><p><a href="https://pan.baidu.com/s/1glYPY8fqW4LZvA8EhHuvxg" target="_blank" rel="noopener">VC++6.0</a><br>提取码：qxzl<br>备注：我是安装在D盘上的，默认是安装在C盘上。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/4.PNG" alt="4"></p>
+</li>
+<li><p><a href="https://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip" target="_blank" rel="noopener">glutdlls37beta.zip</a></p>
+</li>
+</ul>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1.安装VC++6.0，一路安装即可。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/2.PNG" alt="2"></p>
+<p>2.glut文件下载，解压后出现以下5个文件，即<font color="blue"><strong>1个.h文件</strong></font>,<font color="blue"><strong>2个.dll文件</strong></font> 和 <font color="blue"><strong>2个.lib文件</strong></font>。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/1.PNG" alt="1"></p>
+<h4 id="h头文件"><a href="#h头文件" class="headerlink" title=".h头文件"></a>.h头文件</h4><p>将解压后的压缩包中的.h文件放到 VC++安装目录 vc 6.0\VC98\Include\GL 的文件夹中,如下图所示。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/3.PNG" alt="1"></p>
+<p>提示：如果在incluce目录下没有GL文件夹，则需要手动创建。</p>
+<h4 id="dll头文件"><a href="#dll头文件" class="headerlink" title=".dll头文件"></a>.dll头文件</h4><p>将 <font color="blue"><strong>glut.dll</strong></font> ,<font color="blue"><strong>glut32.dll</strong></font> 这两个动态库文件放到操作系统目录下面的 <font color="red"><strong>C:\Windows\system32</strong></font>或<font color="red"><strong>C:\Windows\SysWOW64</strong></font> 下，<br>为了兼容性考虑，最好在这两个目录下都复制相应的文件。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/5.PNG" alt="5"></p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/6.PNG" alt="6"></p>
+<h4 id="lib头文件"><a href="#lib头文件" class="headerlink" title=".lib头文件"></a>.lib头文件</h4><p>解压后将得到的 <font color="blue"><strong>glut.lib</strong></font> 和 <font color="blue"><strong>glut32.lib</strong></font> 这两个静态函数库复制到 vc 6.0\VC98\Lib 文件夹下。</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/7.PNG" alt="7"></p>
+<p>3.程序测试</p>
+<ul>
+<li><p>首先，打开VC++6.0软件，点击菜单栏上的“File(文件)”–&gt;”new(新建)”，如下图所示：</p>
+<p>  <img src="//xiaolei19991030x.github.io/OpenGL/page-13/9.PNG" alt="9"></p>
+</li>
+<li><p>弹出一个“new (新建)”窗口，点击“project（工程）”选项卡，然后选中“Win32 Console Application”,再填写一个工程名，如下图所示：</p>
+<p>  <img src="//xiaolei19991030x.github.io/OpenGL/page-13/10.PNG" alt="10"></p>
+<ul>
+<li><p>选择好后点击“确定”按钮，会弹出“Win32 Console Application”窗口，在窗口中选择什么类型的控制台程序，一般默认“an empty project（一个空过程）”即可，点击“finish（完成）”按钮，如下图所示：</p>
+<p> <img src="//xiaolei19991030x.github.io/OpenGL/page-13/11.PNG" alt="11"></p>
+</li>
+<li><p>这样就创建好了一个新工程，如下图所示：</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/12.PNG" alt="12"></p>
+</li>
+<li><p>选中Source Files文件夹，然后单击菜单栏上的“project（工程）”–&gt;”add file to project（增加到工程）”–&gt;”new（新建）”，如下图所示：</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/13.PNG" alt="13"></p>
+</li>
+<li><p>进入到“new(新建)”窗口，点击“Files（文件）”选项，在其中选择“C++ Source File”选项，在右侧填写“file name(文件名)”，然后点击“确定”按钮，如下图所示：</p>
+<p><img src="//xiaolei19991030x.github.io/OpenGL/page-13/14.PNG" alt="14"></p>
+</li>
+</ul>
+</li>
+<li><p>编写程序，编译运行<br>源代码如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;gl/glut.h&gt; </span><br><span class="line">void mydisplay(void) </span><br><span class="line">&#123; </span><br><span class="line">	  //清除色彩位缓冲区</span><br><span class="line">    glClear(GL_COLOR_BUFFER_BIT);</span><br><span class="line">    glRectf(-0.5f, -0.5f, 0.5f, 0.5f); </span><br><span class="line">    //按上述命令绘制图形，glFlush命令只适用于单缓冲模式</span><br><span class="line">    glFlush(); </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">int main(int argc,char**argv) </span><br><span class="line">&#123; </span><br><span class="line">	  //初始化opengl工具箱函数库</span><br><span class="line">    glutInit(&amp;argc,argv); </span><br><span class="line">    //设置RGB色彩模式与单缓冲绘图模式</span><br><span class="line">    glutInitDisplayMode(GLUT_RGB|GLUT_SINGLE); </span><br><span class="line">    //设置图像显示窗口的左上角位置(20,200)</span><br><span class="line">    glutInitWindowPosition(200,200); </span><br><span class="line">    //设置窗口大小(400,400)</span><br><span class="line">    glutInitWindowSize(400,400); </span><br><span class="line">    //设置窗口标题</span><br><span class="line">    glutCreateWindow(&quot;hello world&quot;); </span><br><span class="line">    //myDisplay，表示取得函数名所对应的地址（函数地址）</span><br><span class="line">    glutDisplayFunc(mydisplay); </span><br><span class="line">    //程序主循环</span><br><span class="line">    glutMainLoop(); </span><br><span class="line">    return 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="//xiaolei19991030x.github.io/OpenGL/page-13/8.PNG" alt="8"></p>
+<ul>
+<li>运行结果如下：<br>  <img src="//xiaolei19991030x.github.io/OpenGL/page-13/15.PNG" alt="15"> </li>
+</ul>
+<h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><p>花了一下午的时间才把OpenGL弄好，期间遇到了各种各样的问题解决在最终都解决了，过程中也收获了许多,也在CSDN上搜了许多教程。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>	
+         
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https：//xiaolei19991030x.github.io/Java-Web/page-12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -403,7 +642,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  496
+                  501
                 </span>
               
 
@@ -2031,198 +2270,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https：//xiaolei19991030x.github.io/Markdown/page-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="demons">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/user.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="O磊的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Markdown/page-3/" itemprop="url">Markdown基本语法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T18:05:51+08:00">
-                2019-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/Markdown/page-3/" class="leancloud_visitors" data-flag-title="Markdown基本语法">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.4k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>开始写博客的时候我们需要使用编辑器来写，这时我们就需要掌握一种基本的语法—<strong>Markdown</strong> 语法<br>Markdown 是一种轻量级且易于使用的语法，用于在GitHub平台上设置所有形式的书写样式。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Markdown/page-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>	
-         
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2275,7 +2322,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2286,7 +2333,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2297,7 +2344,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2354,7 +2401,7 @@
 	<h3 class="widget-title">Tag Cloud</h3>
 	<div id="myCanvasContainer" class="widget tagcloud">
     	    <canvas width="250" height="250" id="resCanvas" style="width=100%">
-       		 <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Web/">Java Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkList/">LinkList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/">tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yilia/">yilia</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单链表/">单链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/循环链表/">循环链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线性表/">线性表</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/链式存储/">链式存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态链表/">静态链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/顺序存储/">顺序存储</a><span class="tag-list-count">1</span></li></ul>
+       		 <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ArrayList/">ArrayList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Web/">Java Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LinkList/">LinkList</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/">OpenGL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github-page/">github page</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/">tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yilia/">yilia</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单链表/">单链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/循环链表/">循环链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线性表/">线性表</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/链式存储/">链式存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/静态链表/">静态链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/顺序存储/">顺序存储</a><span class="tag-list-count">1</span></li></ul>
                    </canvas>
                  </div>
             </div>

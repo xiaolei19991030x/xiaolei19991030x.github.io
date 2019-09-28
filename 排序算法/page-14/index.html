@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Java Web,tomcat,">
+  <meta name="keywords" content="排序算法,">
 
 
 
@@ -82,40 +82,21 @@
 
 
 
-<meta name="description" content="相关软件：  Intellij Idea  破解教程：戳这!!! JDK 1.6/1.7/1.8都可以 tomcat 7以上都可以,去官网下载压缩包解压即可 链接：http://tomcat.apache.org/">
-<meta name="keywords" content="Java Web,tomcat">
+<meta name="description" content="在我们之前的算法设计课程中，我们学习了合并排序与自底向上合并排序算法，今天我们就来分析一下这个算法。 合并算法无论是合并排序还是自底向上合并排序，他的实现都基于一个重要的算法：合并算法（merge算法）。Merge算法实现的功能是将两个数组合并成为一个数组，我们可以定义一个结果数组b，再分别定义两个索引p1、p2，分别指向两个数组的头，将p1、p2指向的两个数进行比较，并将较小的那一个放入数组b">
+<meta name="keywords" content="排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Web学习——用Intellij Idea 创建Web项目">
-<meta property="og:url" content="https：//xiaolei19991030x.github.io/Java-Web/page-12/index.html">
+<meta property="og:title" content="排序算法——合并排序与自底向上合并排序">
+<meta property="og:url" content="https：//xiaolei19991030x.github.io/排序算法/page-14/index.html">
 <meta property="og:site_name" content="O磊的博客">
-<meta property="og:description" content="相关软件：  Intellij Idea  破解教程：戳这!!! JDK 1.6/1.7/1.8都可以 tomcat 7以上都可以,去官网下载压缩包解压即可 链接：http://tomcat.apache.org/">
+<meta property="og:description" content="在我们之前的算法设计课程中，我们学习了合并排序与自底向上合并排序算法，今天我们就来分析一下这个算法。 合并算法无论是合并排序还是自底向上合并排序，他的实现都基于一个重要的算法：合并算法（merge算法）。Merge算法实现的功能是将两个数组合并成为一个数组，我们可以定义一个结果数组b，再分别定义两个索引p1、p2，分别指向两个数组的头，将p1、p2指向的两个数进行比较，并将较小的那一个放入数组b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/1.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/2.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/3.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/4.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/5.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/6.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/7.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/8.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/9.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/10.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/11.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/12.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/13.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/14.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/15.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/16.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/17.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/18.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/19.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/20.png">
-<meta property="og:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/21.png">
-<meta property="og:updated_time" content="2019-09-23T13:52:08.741Z">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1514171/201811/1514171-20181113185542104-1708640919.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1514171/201811/1514171-20181113185634430-855192896.png">
+<meta property="og:updated_time" content="2019-09-28T08:43:39.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Web学习——用Intellij Idea 创建Web项目">
-<meta name="twitter:description" content="相关软件：  Intellij Idea  破解教程：戳这!!! JDK 1.6/1.7/1.8都可以 tomcat 7以上都可以,去官网下载压缩包解压即可 链接：http://tomcat.apache.org/">
-<meta name="twitter:image" content="//xiaolei19991030x.github.io/Java-Web/page-12/1.png">
+<meta name="twitter:title" content="排序算法——合并排序与自底向上合并排序">
+<meta name="twitter:description" content="在我们之前的算法设计课程中，我们学习了合并排序与自底向上合并排序算法，今天我们就来分析一下这个算法。 合并算法无论是合并排序还是自底向上合并排序，他的实现都基于一个重要的算法：合并算法（merge算法）。Merge算法实现的功能是将两个数组合并成为一个数组，我们可以定义一个结果数组b，再分别定义两个索引p1、p2，分别指向两个数组的头，将p1、p2指向的两个数进行比较，并将较小的那一个放入数组b">
+<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1514171/201811/1514171-20181113185542104-1708640919.png">
 
 
 
@@ -145,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https：//xiaolei19991030x.github.io/Java-Web/page-12/">
+  <link rel="canonical" href="https：//xiaolei19991030x.github.io/排序算法/page-14/">
 
 
 
 
 
-  <title>Java Web学习——用Intellij Idea 创建Web项目 | O磊的博客</title>
+  <title>排序算法——合并排序与自底向上合并排序 | O磊的博客</title>
   
 
 
@@ -330,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https：//xiaolei19991030x.github.io/Java-Web/page-12/">
+    <link itemprop="mainEntityOfPage" href="https：//xiaolei19991030x.github.io/排序算法/page-14/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="demons">
@@ -347,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java Web学习——用Intellij Idea 创建Web项目</h1>
+          <h1 class="post-title" itemprop="name headline">排序算法——合并排序与自底向上合并排序</h1>
         
 
         <div class="post-meta">
@@ -359,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T23:37:06+08:00">
-                2019-09-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T16:08:39+08:00">
+                2019-09-28
               </time>
             
 
@@ -382,8 +363,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-Web/" itemprop="url" rel="index">
-                    <span itemprop="name">Java Web</span>
+                  <a href="/categories/排序算法/" itemprop="url" rel="index">
+                    <span itemprop="name">排序算法</span>
                   </a>
                 </span>
 
@@ -399,7 +380,7 @@
 
           
           
-             <span id="/Java-Web/page-12/" class="leancloud_visitors" data-flag-title="Java Web学习——用Intellij Idea 创建Web项目">
+             <span id="/排序算法/page-14/" class="leancloud_visitors" data-flag-title="排序算法——合并排序与自底向上合并排序">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -429,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  501
+                  1.2k
                 </span>
               
 
@@ -445,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  5
                 </span>
               
             </div>
@@ -466,92 +447,19 @@
       
 
       
-        <p>相关软件：</p>
-<ul>
-<li>Intellij Idea  破解教程：<a href="https://jinphy.github.io/2018/08/22/idea-tutorial/" target="_blank" rel="noopener">戳这!!!</a></li>
-<li>JDK 1.6/1.7/1.8都可以</li>
-<li>tomcat 7以上都可以,去官网下载压缩包解压即可 链接：<a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://tomcat.apache.org/</a><a id="more"></a>
+        <p>在我们之前的算法设计课程中，我们学习了合并排序与自底向上合并排序算法，今天我们就来分析一下这个算法。</p>
+<h3 id="合并算法"><a href="#合并算法" class="headerlink" title="合并算法"></a>合并算法</h3><p>无论是合并排序还是自底向上合并排序，他的实现都基于一个重要的算法：合并算法（merge算法）。Merge算法实现的功能是将两个数组合并成为一个数组，我们可以定义一个结果数组b，再分别定义两个索引p1、p2，分别指向两<br>个数组的头，将p1、p2指向的两个数进行比较，并将较小的那一个放入数组b</p>
+<h3 id="Merge算法的伪码如下："><a href="#Merge算法的伪码如下：" class="headerlink" title="Merge算法的伪码如下："></a>Merge算法的伪码如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">merge(p, q, r, a[]):</span><br><span class="line"></span><br><span class="line">s←p; t←q+1; k←p</span><br><span class="line">while s≤q and t≤r</span><br><span class="line">	if a[s] ≤ a[t] then</span><br><span class="line">		b[k] ← a[s]</span><br><span class="line">		s ←s+1</span><br><span class="line">    else</span><br><span class="line">        b[k]←a[t]</span><br><span class="line">        t←t+1</span><br><span class="line">    end if</span><br><span class="line">        k←k+1</span><br><span class="line">end while</span><br><span class="line">if s=q+1 then b[k…r]←a[t…r]</span><br><span class="line">else b[k…r]←a[s…q]</span><br><span class="line">end if</span><br><span class="line">a[p…r]←b[p…r]</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h3 id="一、创建简单web项目2019-9-23-21-51-45"><a href="#一、创建简单web项目2019-9-23-21-51-45" class="headerlink" title="一、创建简单web项目2019/9/23 21:51:45"></a>一、创建简单web项目2019/9/23 21:51:45</h3><ul>
-<li><p>File -&gt; New Project -&gt; 选择你的Project SDK（我的是1.8）-&gt; Next </p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/1.png" alt="1"></p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/2.png" alt="2"></p>
-</li>
-<li><p>输入项目名：webDemo -&gt; Next -&gt; Finish</p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/3.png" alt="3"></p>
-</li>
-</ul>
-<h3 id="二、创建一个Module"><a href="#二、创建一个Module" class="headerlink" title="二、创建一个Module"></a>二、创建一个Module</h3><ul>
-<li>鼠标点中项目名称webDemo -&gt; 右键选择New，选择 Module -&gt; Module SDK 选择1. -&gt; 勾选JavaEE下的Web Application(4.0)，注意窗口下的version对应为4.0，且Create web.xml已勾选 -&gt; Next</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/4.png" alt="4"></p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/5.png" alt="5"></p>
-<ul>
-<li>输入Module name 为firstweb -&gt; Finish</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/6.png" alt="6"></p>
-<ul>
-<li>创建好的web项目</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/7.png" alt="7"></p>
-<ul>
-<li>在web/WEB_INF 目录下创建两个文件夹：classes和lib,classes用来存放编译后输出的class文件，lib用于存放第三方jar包</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/8.png" alt="8"></p>
-<ul>
-<li>配置文件夹路径</li>
-</ul>
-<p>File -&gt; Project Structure (ctrl + shift + Alt + s) 或者使用工具栏的快捷键 -&gt; 选择Modules</p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/9.png" alt="9"></p>
-<ul>
-<li>选择Paths -&gt; 选择“Use module compile out path” -&gt; 将Outputpath 和Test output path 都设置为刚刚创建的classes文件夹的路径。</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/10.png" alt="10"></p>
-<ul>
-<li>选择当前窗口的Dependencies -&gt; 将Module SDK选择为1.8 -&gt; 点击下边的 + 号 -&gt; 选择 “1 JARS or directories …”</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/11.png" alt="11"></p>
-<ul>
-<li>选择刚刚创建的lib文件夹 -&gt; OK</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/12.png" alt="12"></p>
-<ul>
-<li>选择Jar Directory -&gt; OK</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/13.png" alt="13"></p>
-<ul>
-<li>Apply -&gt; OK</li>
-</ul>
-<h3 id="三、配置Tomcat容器"><a href="#三、配置Tomcat容器" class="headerlink" title="三、配置Tomcat容器"></a>三、配置Tomcat容器</h3><ul>
-<li>打开菜单Run -&gt; Edit Configurations…</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/14.png" alt="14"></p>
-<ul>
-<li>点击 “+” ，选择 “Tomcat Server” -&gt; 选择“Local”</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/15.png" alt="15"></p>
-<ul>
-<li>在”Name”处输入新的服务名，点击”Application server”后面的”Configure…”，弹出Tomcat Server窗口，选择本地安装的Tomcat目录 -&gt; OK </li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/16.png" alt="16"></p>
-<h3 id="四、在tomcat上部署并运行项目"><a href="#四、在tomcat上部署并运行项目" class="headerlink" title="四、在tomcat上部署并运行项目"></a>四、在tomcat上部署并运行项目</h3><ul>
-<li>选择Deployment -&gt; 点击下面的“+”号 -&gt; 选择Artifact</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/17.png" alt="17"></p>
-<ul>
-<li>选择web项目 -&gt; Application context可以填“/firstweb”(访问项目用，也可以不填) -&gt; OK </li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/18.png" alt="18"></p>
-<ul>
-<li>回到Server面板,勾选取消“After Launch”，设置“HTTP port”和“JMX port”（默认值即可），将On ‘update’ action和On frame deactivation（这两个选项是tomcat配置了项目后才有的）改为update classes and resources -&gt; Apply</li>
-</ul>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/19.png" alt="19"></p>
-<h3 id="五、开发web项目并运行tomcat查看效果"><a href="#五、开发web项目并运行tomcat查看效果" class="headerlink" title="五、开发web项目并运行tomcat查看效果"></a>五、开发web项目并运行tomcat查看效果</h3><p>1、编辑index.jsp页面</p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/20.png" alt="20"></p>
-<p>2、运行Tomcat</p>
-<p><img src="//xiaolei19991030x.github.io/Java-Web/page-12/21.png" alt="21"></p>
+<h3 id="自底向上合并排序算法"><a href="#自底向上合并排序算法" class="headerlink" title="自底向上合并排序算法"></a>自底向上合并排序算法</h3><p>自底向上合并算法顾名思义，就是从最底部开始，将数组元素两两合并，再将合并后的数组两两合并，直到重新合并成一个完整的数组。对于数组a = {9,4,5,2,1,7,4,6}的合并过程可以用如下图来表示：<br><img src="https://img2018.cnblogs.com/blog/1514171/201811/1514171-20181113185542104-1708640919.png" alt></p>
+<h3 id="完整代码-java"><a href="#完整代码-java" class="headerlink" title="完整代码(java)"></a>完整代码(java)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//自底向上合并排序</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BottomUpSort</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a[] = &#123;<span class="number">9</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">4</span>,<span class="number">6</span>&#125;;</span><br><span class="line">        bottomUpSort(a);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;a.length;i++)</span><br><span class="line">            System.out.print(a[i] + <span class="string">" "</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bottomUpSort</span><span class="params">(<span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i, s, t = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(t &lt; a.length-<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            s = t;</span><br><span class="line">            t = <span class="number">2</span>*s;</span><br><span class="line">            i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(;i+t &lt; a.length;i+=t)</span><br><span class="line">                merge(i, i+s-<span class="number">1</span>, i+t-<span class="number">1</span>, a);    <span class="comment">//自底向上进行排序</span></span><br><span class="line">            <span class="keyword">if</span>(i+s-<span class="number">1</span> &lt; a.length-<span class="number">1</span>)    <span class="comment">//判断是否有落单元素</span></span><br><span class="line">                merge(i, i+s-<span class="number">1</span>, a.length-<span class="number">1</span>, a);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> low, <span class="keyword">int</span> mid, <span class="keyword">int</span> high, <span class="keyword">int</span> a[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b[] = <span class="keyword">new</span> <span class="keyword">int</span>[a.length];    <span class="comment">//    建立转存数组</span></span><br><span class="line">        <span class="keyword">int</span> f = low, s = mid+<span class="number">1</span>, p = low;</span><br><span class="line">        <span class="comment">//f为第一个数组索引，s为第二个数组索引，p为b数组索引</span></span><br><span class="line">        <span class="keyword">while</span>(f&lt;=mid &amp;&amp; s&lt;=high)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//在两个数组元素中值小的一方放入b数组</span></span><br><span class="line">            <span class="keyword">if</span>(a[f] &lt;= a[s])</span><br><span class="line">            &#123;</span><br><span class="line">                b[p] = a[f];</span><br><span class="line">                f++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                b[p] = a[s];</span><br><span class="line">                s++;</span><br><span class="line">            &#125;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(f == mid+<span class="number">1</span>)    <span class="comment">//若第一个数组中的元素全部存储进去了，那么将第二个数组中的剩余元素全部放入b数组</span></span><br><span class="line">            <span class="keyword">for</span>(;s &lt;= high &amp;&amp; p&lt;=high;p++,s++)</span><br><span class="line">                b[p] = a[s];</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">//否则将第一个数组中的元素全部放入b数组</span></span><br><span class="line">            <span class="keyword">for</span>(;f&lt;=mid &amp;&amp; p&lt;=high;p++,f++)    </span><br><span class="line">                b[p] = a[f];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=low;i&lt;=high;i++)</span><br><span class="line">            a[i] = b[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并排序算法"><a href="#合并排序算法" class="headerlink" title="合并排序算法"></a>合并排序算法</h3><p>合并排序算法与自底向上合并排序十分相似（废话！），只不过与自底向上合并排序不同的是，合并排序是一个自顶向下的过程。我们可以将一整个数组拆分成两个数组，将其中的一个数组再进行拆分，直到拆分成两个单个元素，再将他们合并…重复此过程直到整个数组都重新合并完毕。</p>
+<p>对于数组a[]={9,4,5,2,1,7,4,6}的合并排序可以用如下图示表示：<br><img src="https://img2018.cnblogs.com/blog/1514171/201811/1514171-20181113185634430-855192896.png" alt></p>
+<h3 id="合并排序算法伪代码如下："><a href="#合并排序算法伪代码如下：" class="headerlink" title="合并排序算法伪代码如下："></a>合并排序算法伪代码如下：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mergesort(low, high, a[]):</span><br><span class="line"></span><br><span class="line">if low&lt;high then</span><br><span class="line">	mid←(low + high)/2</span><br><span class="line">    ergesort(low, mid, a)</span><br><span class="line">    mergesort(mid+1, high, a)</span><br><span class="line">    merge(low, mid, high, a)</span><br><span class="line">end if</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整代码（Java"><a href="#完整代码（Java" class="headerlink" title="完整代码（Java)"></a>完整代码（Java)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">//合并排序算法</span><br><span class="line">public class MergeSort &#123;</span><br><span class="line">    public static void main(String args[])</span><br><span class="line">    &#123;</span><br><span class="line">        int a[] = &#123;9,4,5,2,1,7,4,6&#125;;</span><br><span class="line">        mergeSort(0, a.length-1, a);</span><br><span class="line">        for(int i=0;i&lt;a.length;i++)</span><br><span class="line">            System.out.print(a[i] + &quot; &quot;);</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //合并排序</span><br><span class="line">    public static void mergeSort(int low, int high, int a[])</span><br><span class="line">    &#123;</span><br><span class="line">        if(low &lt; high)</span><br><span class="line">        &#123;</span><br><span class="line">            int mid = (low + high)/2;</span><br><span class="line">            mergeSort(low, mid, a);</span><br><span class="line">            mergeSort(mid+1, high, a);</span><br><span class="line">            merge(low, mid, high, a);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //合并两个数组</span><br><span class="line">    public static void merge(int low, int mid, int high, int a[])</span><br><span class="line">    &#123;</span><br><span class="line">        int b[] = new int[a.length];    //    建立转存数组</span><br><span class="line">        int f = low, s = mid+1, p = low;</span><br><span class="line">        //f为第一个数组索引，s为第二个数组索引，p为b数组索引</span><br><span class="line">        while(f&lt;=mid &amp;&amp; s&lt;=high)</span><br><span class="line">        &#123;</span><br><span class="line">            //在两个数组元素中值小的一方放入b数组</span><br><span class="line">            if(a[f] &lt;= a[s])</span><br><span class="line">            &#123;</span><br><span class="line">                b[p] = a[f];</span><br><span class="line">                f++;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                b[p] = a[s];</span><br><span class="line">                s++;</span><br><span class="line">            &#125;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if(f == mid+1)    //若第一个数组中的元素全部存储进去了，那么将第二个数组中的剩余元素全部放入b数组</span><br><span class="line">            for(;s &lt;= high &amp;&amp; p&lt;=high;p++,s++)</span><br><span class="line">                b[p] = a[s];</span><br><span class="line">        else //否则将第一个数组中的元素全部放入b数组</span><br><span class="line">            for(;f&lt;=mid &amp;&amp; p&lt;=high;p++,f++)    </span><br><span class="line">                b[p] = a[f];</span><br><span class="line">        </span><br><span class="line">        for(int i=low;i&lt;=high;i++)</span><br><span class="line">            a[i] = b[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -611,7 +519,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https：//xiaolei19991030x.github.io/Java-Web/page-12/" title="Java Web学习——用Intellij Idea 创建Web项目">https：//xiaolei19991030x.github.io/Java-Web/page-12/</a>
+    <a href="https：//xiaolei19991030x.github.io/排序算法/page-14/" title="排序算法——合并排序与自底向上合并排序">https：//xiaolei19991030x.github.io/排序算法/page-14/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -626,9 +534,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java-Web/" rel="tag"><i class="fa fa-tag"> Java Web</i></a>
-          
-            <a href="/tags/tomcat/" rel="tag"><i class="fa fa-tag"> tomcat</i></a>
+            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"> 排序算法</i></a>
           
         </div>
       
@@ -641,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/数据结构/page-11/" rel="next" title="大话数据结构（三）— 栈的两种java实现方式">
-                <i class="fa fa-chevron-left"></i> 大话数据结构（三）— 栈的两种java实现方式
+              <a href="/OpenGL/page-13/" rel="next" title="如何在VC++6.0上搭建OpenGL开发环境">
+                <i class="fa fa-chevron-left"></i> 如何在VC++6.0上搭建OpenGL开发环境
               </a>
             
           </div>
@@ -650,10 +556,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/OpenGL/page-13/" rel="prev" title="如何在VC++6.0上搭建OpenGL开发环境">
-                如何在VC++6.0上搭建OpenGL开发环境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -810,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、创建简单web项目2019-9-23-21-51-45"><span class="nav-number">1.</span> <span class="nav-text">一、创建简单web项目2019/9/23 21:51:45</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、创建一个Module"><span class="nav-number">2.</span> <span class="nav-text">二、创建一个Module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、配置Tomcat容器"><span class="nav-number">3.</span> <span class="nav-text">三、配置Tomcat容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、在tomcat上部署并运行项目"><span class="nav-number">4.</span> <span class="nav-text">四、在tomcat上部署并运行项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、开发web项目并运行tomcat查看效果"><span class="nav-number">5.</span> <span class="nav-text">五、开发web项目并运行tomcat查看效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#合并算法"><span class="nav-number">1.</span> <span class="nav-text">合并算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge算法的伪码如下："><span class="nav-number">2.</span> <span class="nav-text">Merge算法的伪码如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自底向上合并排序算法"><span class="nav-number">3.</span> <span class="nav-text">自底向上合并排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完整代码-java"><span class="nav-number">4.</span> <span class="nav-text">完整代码(java)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并排序算法"><span class="nav-number">5.</span> <span class="nav-text">合并排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并排序算法伪代码如下："><span class="nav-number">6.</span> <span class="nav-text">合并排序算法伪代码如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完整代码（Java"><span class="nav-number">7.</span> <span class="nav-text">完整代码（Java)</span></a></li></ol></div>
             
 
           </div>
